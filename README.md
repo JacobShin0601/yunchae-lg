@@ -42,7 +42,8 @@ This document provides an overview and description of key projects conducted for
 ### Reference
 - **Reference1(Youtube Summarizer)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/YoutubeSummarizer
 - **Reference2(Youtube Summarizer on article)**: https://www.mk.co.kr/news/business/10989892
-- **Reference3(Multimodal RAG)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/MultimodalRAG 
+- **Reference3(Chain of Density paper)**: https://arxiv.org/abs/2309.04269 
+- **Reference4(Multimodal RAG)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/MultimodalRAG 
 
 ### Outcomes
 - Successfully upgraded the YouTube summarization system, distributing weekly newsletters to internal stakeholders.
