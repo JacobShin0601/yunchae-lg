@@ -19,6 +19,9 @@ This document provides an overview and description of key projects conducted for
 - **Data Sources**: Analyst & Research Institute reports, 10-K filings, YouTube (with future plans to add Reddit)
 - **Tools**: Python, LangChain, Pydantic, AWS (Bedrock architecture design and deployment)
 
+### Reference
+- **Reference1(Sentiment Scoring System)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/MarketSentimentScoringSystem
+
 ### Outcomes
 - Successfully developed the Market Sentiment Scoring system, which serves as a key feature and leading indicator in the 12-month lithium price forecasting model.
 - Achieved 80% backtest accuracy in the long-term price forecasting model in collaboration with LG AI Research, supporting future price predictions.
@@ -35,6 +38,11 @@ This document provides an overview and description of key projects conducted for
 - **Summarization Models**: Statistical analysis for keyword selection, LLM-based text summarization (Chain of Density model)
 - **Multimodal RAG**: Document preprocessing techniques, Claude 3.5 Sonnet model for integrating electric vehicle and lithium-related reports, vector storage
 - **Tools**: Python, Unstructured.io, AWS (for summarizer pipeline migration and architecture design, OpenSearch, Lambda)
+
+### Reference
+- **Reference1(Youtube Summarizer)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/YoutubeSummarizer
+- **Reference2(Youtube Summarizer on article)**: https://www.mk.co.kr/news/business/10989892
+- **Reference3(Multimodal RAG)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/MultimodalRAG 
 
 ### Outcomes
 - Successfully upgraded the YouTube summarization system, distributing weekly newsletters to internal stakeholders.
@@ -67,8 +75,9 @@ These projects contributed to strategic decision-making for LG Energy Solution a
 - **통계 분석**: 상관관계 및 그레인저 인과성 검정, 정규성 및 등분산성 검정 및 비모수 검정
 - **데이터 소스**: Analyst & Research Institute 리포트, 10-K 보고서, YouTube (향후 Reddit 추가 예정)
 - **도구**: Python, LangChain, Pydantic, AWS (Bedrock 아키텍처 설계 및 배포)
-- **Reference1(Youtube Summarizer)**: 
-- **Reference2(Youtube Summarizer on article)**: https://www.mk.co.kr/news/business/10989892
+
+### Reference
+- **Reference1(Sentiment Scoring System)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/MarketSentimentScoringSystem
 
 ### 성과
 - Market Sentiment Scoring 시스템을 성공적으로 개발하여, 12개월 리튬 가격 예측 모델의 주요 feature이자 선행 지표로 활용.
@@ -86,6 +95,11 @@ These projects contributed to strategic decision-making for LG Energy Solution a
 - **요약 모델**: 키워드 선택을 위한 통계 분석, LLM 기반 텍스트 요약 모델 (Chain of Density 모델).
 - **멀티모달 RAG**: 문서 전처리 기술 & 전기차 및 리튬 관련 보고서 통합을 위한 Claude 3.5 Sonnet 모델 & 벡터 스토
 - **도구**: Python, Unstructured.io, AWS(서머라이저 파이프라인 이전 및 아키텍처 설계, OpenSearch, Lambda...).
+
+### Reference
+- **Reference1(Youtube Summarizer)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/YoutubeSummarizer
+- **Reference2(Youtube Summarizer on article)**: https://www.mk.co.kr/news/business/10989892
+- **Reference3(Multimodal RAG)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/MultimodalRAG 
 
 ### 성과
 - YouTube 요약 시스템을 성공적으로 업그레이드하여 내부 이해관계자들에게 주간 뉴스레터 형태로 배포.
