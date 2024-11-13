@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LG에너지솔루션 뉴스레터</title>
+    <link rel="stylesheet" href="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/css/common.css" />
+    <style>
+      .e-content-chip-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .e-content-chip {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        background-color: #f5f5f5;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .e-content-chip img {
+        margin-right: 5px;
+      }
+
+      .e-content-chip.active {
+        background-color: #ffffff; /* 배경색을 하얀색으로 변경 */
+        border-color: #000;
+      }
+      /* 배터리 위치 조정 */
+      .e-center {
+        position: relative;
+      }
+
+      .e-battery {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+      }
+      .small-text {
+        font-size: smaller;
+      }
+      .e-youtube-area {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    <!-- wrapper -->
+    <main class="e-wrapper">
+      <!-- header -->
+      <header class="e-header">
+        <!-- main title area -->
+        <div class="e-header-titles">
+          <h1 class="e-header-logo">
+            <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/logo.png" />
+          </h1>
+          <h2 class="e-content-title">
+            <span>{{ year }} Week {{ week }} </span> Youtube Trending Report
+          </h2>
+          <h2 class="e-header-logo2">
+            <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/logo2.png" />
+          </h2>
+        </div>
+        <!--/ main title area -->
+
+        <!-- main tab area -->
+        <nav class="e-content-tabs">
+          <button class="e-content-tab all">
+            <span>전체보기</span>
+          </button>
+          <button class="e-content-tab oem active">
+            <span>주요 OEM</span> 
+          </button>
+          <button class="e-content-tab material">
+            <span>원재료</span>
+          </button>
+          <button class="e-content-tab competitor">
+            <span>경쟁사</span>
+          </button>
+          <button class="e-content-tab environment">
+            <span>외부 환경</span>
+          </button>
+        </nav>
+        <!--// main tab area -->
+      </header>
+      <!--// header -->
+
+      <!-- content -->
+      <section class="e-content">
+        <!-- content tab area -->
+        <nav class="e-content-header">
+          <!-- 전체보기 카테고리 -->
+          <div class="e-content-chip-wrapper all-chips" style="display: none;">
+            <div class="e-allbox">
+              <div class="e-allcenter">
+                <dl>
+                  <dt>
+                    <strong>주요 OEM</strong>
+                    {{ cnt_dict.oem_cnt }}개
+                  </dt>
+                  <dd>
+                    <button class="e-content-chip-new square-chip" data-category="GM" onclick="switchCategory('oem', 'GM')">
+                      <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/ico01.png" />
+                      <span>GM</span><small-text>({{ cnt_dict.GM }}개)</small-text>
+                    </button>
+                    <button class="e-content-chip-new square-chip" data-category="VW" onclick="switchCategory('oem', 'VW')">
+                      <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/ico02.png" />
+                      <span>VW</span><small-text>({{ cnt_dict.VW }}개)</small-text>
+                    </button>
+                    <button class="e-content-chip-new square-chip" data-category="Ford" onclick="switchCategory('oem', 'Ford')">
+                      <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/ico03.png" />
+                      <span>Ford</span><small-text>({{ cnt_dict.Ford }}개)</small-text>
+                    </button>
+                    <button class="e-content-chip-new square-chip" data-category="Tesla" onclick="switchCategory('oem', 'Tesla')">
+                      <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/ico_04.png" />
+                      <span>Tesla</span><small-text>({{ cnt_dict.Tesla }}개)</small-text>
+                    </button>
+                  </dd>
+                </dl>
+              </div>
+              <div class="e-allcenter">
+                <dl>
+                  <dt>
+                    <strong>원재료</strong>
+                    {{ cnt_dict.material_cnt }}개
+                  </dt>
+                  <dd>
+                    <button class="e-content-chip-new square-chip" data-category="LITHIUM SUPPLY CHAIN" onclick="switchCategory('material', 'LITHIUM SUPPLY CHAIN')">
+                      <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/icoo03.png" />
+                      <span>Lithium Supply Chain</span><small-text>({{ cnt_dict.LITHIUM_SUPPLY_CHAIN }}개)</small-text>
+                    </button>
+                    <button class="e-content-chip-new square-chip" data-category="LITHIUM INVESTMENT" onclick="switchCategory('material', 'LITHIUM INVESTMENT')">
+                      <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/icoo02.png" />
+                      <span>Lithium Investment</span><small-text>({{ cnt_dict.LITHIUM_INVESTMENT }}개)</small-text>
+                    </button>
+                  </dd>
+                </dl>
+              </div>
+              <div class="e-allcenter">
+                <dl>
+                  <dt>
+                    <strong>경쟁사</strong>
+                    {{ cnt_dict.competitor_cnt }}개
+                  </dt>
+                  <dd>
+                    <button class="e-content-chip-new square-chip" data-category="CATL" onclick="switchCategory('competitor', 'CATL')">
+                      <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/icog01.png" />
+                      <span>CATL</span><small-text>({{ cnt_dict.CATL }}개)</small-text>
+                    </button>
+                    <button class="e-content-chip-new square-chip" data-category="삼성SDI" onclick="switchCategory('competitor', '삼성SDI')">
+                      <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/icog03.png" />
+                      <span>삼성SDI</span><small-text>({{ cnt_dict.삼성SDI }}개)</small-text>
+                    </button>
+                    <button class="e-content-chip-new square-chip" data-category="SK온" onclick="switchCategory('competitor', 'SK온')">
+                      <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/icog02.png" />
+                      <span>SK온</span><small-text>({{ cnt_dict.SK온 }}개)</small-text>
+                    </button>
+                  </dd>
+                </dl>
+              </div>
+              <div class="e-allcenter">
+                <dl>
+                  <dt>
+                    <strong>외부 환경</strong>
+                    {{ cnt_dict.environment_cnt }}개
+                  </dt>
+                  <dd>
+                    <button class="e-content-chip-new square-chip" data-category="EV Policy" onclick="switchCategory('environment', 'EV Policy')">
+                      <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/icoe01.png" />
+                      <span>EV Policy</span><small-text>({{ cnt_dict.EV_Policy }}개)</small-text>
+                    </button>
+                    <button class="e-content-chip-new square-chip" data-category="EV News" onclick="switchCategory('environment', 'EV News')">
+                      <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/icoe02.png" />
+                      <span>EV News</span><small-text>({{ cnt_dict.EV_News }}개)</small-text>
+                    </button>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <!-- OEM 카테고리 -->
+          <div class="e-content-chip-wrapper oem-chips">
+            <button class="e-content-chip active" data-category="GM" onclick="switchCategory('oem', 'GM')">
+              <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/ico_gm.png" />
+              <span>GM</span>
+            </button>
+            <button class="e-content-chip" data-category="VW" onclick="switchCategory('oem', 'VW')">
+              <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/ico_vw.png" />
+              <span>VW</span>
+            </button>
+            <button class="e-content-chip" data-category="Ford" onclick="switchCategory('oem', 'Ford')">
+              <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/ico_ford.png" />
+              <span>Ford</span>
+            </button>
+            <button class="e-content-chip" data-category="Tesla" onclick="switchCategory('oem', 'Tesla')">
+              <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/ico_Tesla.png" />
+              <span>Tesla</span>
+            </button>
+          </div>
+
+          <!-- 원재료 카테고리 -->
+          <div class="e-content-chip-wrapper material-chips" style="display: none;">
+            <button class="e-content-chip active" data-category="LITHIUM SUPPLY CHAIN" onclick="switchCategory('material', 'LITHIUM SUPPLY CHAIN')">
+              <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/icoo03.png" />
+              <span>Lithium Supply Chain</span>
+            </button>
+            <button class="e-content-chip" data-category="LITHIUM INVESTMENT" onclick="switchCategory('material', 'LITHIUM INVESTMENT')">
+              <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/icoo02.png" />
+              <span>Lithium Investment</span>
+            </button>  
+          </div>
+
+          <!-- 경쟁사 카테고리 -->
+          <div class="e-content-chip-wrapper competitor-chips" style="display: none;">
+            <button class="e-content-chip active" data-category="CATL" onclick="switchCategory('competitor', 'CATL')">
+              <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/icog01.png" />
+              <span>CATL</span>
+            </button>
+            <button class="e-content-chip" data-category="삼성SDI" onclick="switchCategory('competitor', '삼성SDI')">
+              <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/icog03.png" />
+              <span>삼성SDI</span>
+            </button>
+            <button class="e-content-chip" data-category="SK온" onclick="switchCategory('competitor', 'SK온')">
+              <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/icog02.png" />
+              <span>SK온</span>
+            </button>  
+          </div>
+
+          <!-- 외부 환경 카테고리 -->
+          <div class="e-content-chip-wrapper environment-chips" style="display: none;">
+            <button class="e-content-chip active" data-category="EV Policy" onclick="switchCategory('environment', 'EV Policy')">
+              <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/icoe01.png" />
+              <span>EV Policy</span>
+            </button>
+            <button class="e-content-chip" data-category="EV News" onclick="switchCategory('environment', 'EV News')">
+              <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/icoe02.png" />
+              <span>EV News</span>
+            </button>
+          </div>
+        </nav>
+        <!--// content tab area -->
+
+        <!-- trend articles info area -->
+        <div class="e-center">
+          <div class="e-centerText">
+            아래 한줄 요약 내용을 선택하면 <span>&nbsp;AI가 요약</span>한 트랜드 정보를 볼 수 있습니다
+            <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/thema.png" />
+          </div>
+          <div class="e-centerText readAll">
+            대단해요! 모든 내용을 다 읽었습니다
+            <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/readall.png" alt="" />
+          </div>
+          <div class="e-battery">
+            <div class="e-batery-center"></div>
+          </div>
+        </div>
+        <!--// trend articles info area -->
+
+        {% for item in summary %}
+        <div class="e-content-wrapper {{ item.category | lower }}">
+          <!-- 키워드 기사 내용  -->
+          <article class="e-content-article">
+            <!-- 키워드 기사 제목 -->
+            <header class="e-content-headers">
+              <h3 class="e-article-title">
+                <span class="number">{{ loop.index0+1 }}</span>
+                <span>
+                  {{ item.enhanced_summary.주요내용 }}
+                </span>
+              </h3>
+              <i class="e-icon lighting"></i>
+              <i class="e-icon fold"></i>
+            </header>
+            <!--// 키워드 기사 제목 -->
+            <!-- 키워드 기사 상세 -->
+            <section class="e-article-content">
+                
+              <!-- 키워드 기사 youtube 영역 -->
+              <div class="e-article-youtube">
+                <a href="https://www.youtube.com/embed/{{ item.id.videoId }}" target="_blank">
+                  <img
+                    class="e-youtube-area"
+                    src="{{ item.snippet.thumbnails.medium.url }}"
+                    alt="{{ item.snippet.title }}"
+                    width="320"
+                    height="180"
+                  />
+                </a>
+                <div class="e-youtubu-info">
+                  <h4 class="e-youtube-title">
+                    {{ item.snippet.title }}
+                  </h4>
+                  <p class="e-youtube-chanel">{{ item.snippet.channelTitle }}</p>
+                  <div class="reaction-flex">
+                    <p class="e-youtube-reaction time">{{ item.duration }}</p>
+                    <p class="e-youtube-reaction views">{{ item.statistics.viewCount }}</p>
+                    <p class="e-youtube-reaction good">{{ item.statistics.likeCount }}</p>
+                    <p class="e-youtube-reaction comment">
+                      {{ item.statistics.commentCount}}
+                      <button class="btn-more">덧글 TOP3</button>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--// 키워드 기사 youtube 영역 -->
+              <!-- 키워드 기사 youtube 댓글 영역 -->
+              <div class="news-box">
+                {% for comment in item.comments[:3] %}
+                <div class="news-box-list">
+                  <span>
+                    {{ comment.textOriginal}}
+                  </span>
+                  <button class="btn-more"></button>
+                  <p>
+                    <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/sm_04.png" />
+                    {{ comment.likeCount}}
+                  </p>
+                </div>
+                {% endfor %}
+              </div>
+              <!--// 키워드 기사 youtube 댓글 영역 -->
+
+              <!-- 요약 내용 -->
+              <div class="e-article-details">
+                <h4 class="e-article-subtitle">
+                  <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/sl_01.png" />
+                  요약 내용
+                </h4>
+                <ul class="e-article-list">
+                  {% for bullet in item.enhanced_summary.내용 %}
+                  <li>
+                    {{ bullet }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <!--// 요약 내용 -->
+
+              <!-- 긍부정 평가 -->
+              <div class="e-article-details">
+                <h4 class="e-article-subtitle">
+                  <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/sl_02.png" />
+                  긍부정 평가
+                </h4>
+                <ul class="e-article-list">
+                  <li>
+                    {{ item.enhanced_summary["긍부정 평가"] }}
+                  </li>
+                </ul>
+              </div>
+              <!--// 긍부정 평가 -->
+
+              <!-- 관련 기사 -->
+              <div class="e-article-details">
+                <h4 class="e-article-subtitle">
+                  <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/sl_03.png" />
+                  관련 기사
+                </h4>
+                <ul class="e-article-list blue">
+                  {% for news in item.news[:3] %}
+                  <li>
+                    <a
+                      href="{{ news.link }}"
+                      target="_blank"
+                      >{{ news.title }}
+                      <img src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/images/link.png" />
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <!--// 관련 기사 -->
+            </section>
+            <!--// 키워드 기사 상세 -->
+          </article>
+          <!--// 키워드 기사 내용  -->
+        </div>
+        {% endfor %}
+      
+        <!-- footer -->
+        <footer class="e-footer">
+          <p>Publication date :2024-05-13</p>
+          <p>
+            Published by : CDO.AI/Big Data Center.AI Solution Department.AI
+            Solution 2 Team
+          </p>
+        </footer>
+        <!--// footer -->
+      </section>
+
+      <!-- top button -->
+      <button class="e-btn-top"></button>
+      <!--// top button -->
+    </main>
+    <!--// wrapper -->
+    <!-- scripts -->
+    <script src="https://summarizer-db.s3.ap-northeast-2.amazonaws.com/resources/new/common.js"></script>
+    <script>
+                          
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      // 탭 버튼 클릭 이벤트 핸들러
+      document.querySelectorAll('.e-content-tab').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          // 모든 탭 버튼에서 active 클래스 제거
+          document.querySelectorAll('.e-content-tab').forEach(function (tab) {
+            tab.classList.remove('active');
+          });
+          // 클릭된 탭 버튼에 active 클래스 추가
+          this.classList.add('active');
+
+          // 모든 섹션 숨기기
+          document.querySelectorAll('.e-content-chip-wrapper').forEach(function (wrapper) {
+            wrapper.style.display = 'none';
+          });
+
+          // 클릭된 탭 버튼과 관련된 섹션 표시 및 summary-section 처리
+          if (this.classList.contains('all')) {
+            document.querySelector('.all-chips').style.display = 'block';
+            
+            const elements = document.querySelectorAll('[class^="e-content-wrapper"]');
+    
+            // HTMLCollection을 Array로 변환하여 forEach 메서드를 사용
+            elements.forEach(function(element) {
+                element.style.display = 'none';
+            });
+
+            // e-center display none
+            document.querySelector('.e-center').style.display = 'none';
+          } else {
+            document.querySelector('.' + this.classList[1] + '-chips').style.display = 'block';
+            document.getElementById('summary-section').style.display = 'block'; // 다른 카테고리에서는 summary-section 표시
+            document.querySelector('.e-center').style.display = 'block';
+          }
+        });
+
+        
+      });
+    });
+        
+    function switchCategory(mainCategory, subCategory) {
+      document.querySelector('.e-center').style.display = 'block';
+      
+      // 모든 1차 카테고리 탭에서 active 클래스 제거
+      document.querySelectorAll('.e-content-tab').forEach(function (tab) {
+        tab.classList.remove('active');
+      });
+  
+      // 클릭된 1차 카테고리 탭에 active 클래스 추가
+      document.querySelector('.e-content-tab.' + mainCategory).classList.add('active');
+
+      // 모든 2차 카테고리 섹션 숨기기
+      document.querySelectorAll('.e-content-chip-wrapper').forEach(function (wrapper) {
+        wrapper.style.display = 'none';
+      });
+      // 클릭된 1차 카테고리 섹션 표시
+      document.querySelector('.' + mainCategory + '-chips').style.display = 'flex';
+
+      // 모든 2차 카테고리 버튼에서 active 클래스 제거
+      document.querySelectorAll('.' + mainCategory + '-chips .e-content-chip').forEach(function (chip) {
+        chip.classList.remove('active');
+      });
+      // 클릭된 2차 카테고리 버튼에 active 클래스 추가
+      document.querySelector('.' + mainCategory + '-chips .e-content-chip[data-category="' + subCategory + '"]').classList.add('active');
+
+      // Show or hide the summary section based on the main category
+      if (mainCategory === 'all') {
+        document.getElementById('summary-section').style.display = 'none'; // Hide summary section in 전체보기
+      } else {
+        document.getElementById('summary-section').style.display = 'block'; // Show summary section in other categories
+      }
+    }
+    </script>
+  </body>
+</html>

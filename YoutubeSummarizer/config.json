@@ -1,0 +1,43 @@
+{
+    "LLM" : {
+        "max_tokens" : 10000,
+        "temperature" : 0.0
+    },
+    "Channel" : {
+        "channel_id" : [
+            "UCEjOSbbaOfgnfRODEEMYlCw",
+            "UCj9yUGuMVVdm2DqyvJPUeUQ",
+            "UCvJJ_dzjViJCoLf5uKUTwoA",
+            "UCjzi56cxvmEDwjo1Bd2Yxpg",
+            "UCUBHuG2jnmRYu8AyKuGGing",
+            "UC32lvHvH7uAeKM7ybVwl2JQ",
+            "UCDLCUoNT_y-CCgiBAHNNuRg",
+            "UCvADSaOPH2z9NNQY-6Sn_FA",
+            "UC675NhQ4EU5TzwCMwYp5XCw",
+            "UCrp_UI8XtuYfpiqluWLD7Lw"
+        ],
+        "keywords":[
+            "electric vehicle",
+            "ford",
+            "gm",
+            "VW",
+            "tesla"
+        ]
+    },
+    "Query" : {
+        "querys" : [
+            "gm EV",
+            "Volkswagen EV",
+            "Ford EV",
+            "Tesla EV",
+            "LITHIUM SUPPLY CHAIN",
+            "LITHIUM INVESTMENT",
+            "battery \"CATL\"",
+            "배터리 \"삼성SDI\"",
+            "배터리 \"SK On\"",
+            "electric vehicle policy",
+            "EV market news"
+        ]
+    }
+}
+

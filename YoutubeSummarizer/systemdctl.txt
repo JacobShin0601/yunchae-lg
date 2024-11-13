@@ -1,0 +1,56 @@
+### timer 수정 ###
+sudo vim /etc/systemd/system/weekly-backup.timer
+[Unit]
+Description=Weekly Backup Timer
+
+[Timer]
+OnCalendar=Sun 23:00:00 UTC
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
+
+
+### 실행파일 수정 ###
+sudo vim /etc/systemd/system/weekly-backup.service
+[Unit]
+Description=Weekly backup script
+
+[Service]
+ExecStart=/bin/bash /home/ubuntu/ver2/run_main.sh
+WorkingDirectory=/home/ubuntu/ver2
+Environment="HOME=/home/ubuntu"
+Environment="AWS_CONFIG_FILE=/home/ubuntu/.aws/config"
+Environment="AWS_SHARED_CREDENTIALS_FILE=/home/ubuntu/.aws/credentials"
+User=ubuntu
+
+[Install]
+WantedBy=multi-user.target
+
+
+### Reload and run ###
+sudo systemctl daemon-reload
+
+sudo systemctl restart weekly-backup.timer
+
+systemctl status weekly-backup.timer
+systemctl status weekly-backup.service
+
+
+
+
+
+
+##################
+sudo vim /etc/systemd/system/weekly-mail.timer
+sudo vim /etc/systemd/system/weekly-mail.service
+
+
+
+sudo systemctl restart weekly-mail.timer
+
+systemctl status weekly-mail.timer
+systemctl status weekly-mail.service
+
+

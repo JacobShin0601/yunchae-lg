@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    }
+
+    header {
+        background-color: white;
+        color: #333;
+        text-align: center;
+        padding: 1em 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+        position: absolute;
+        object-fit: cover;
+        top: 35px;
+        left: 35px;
+        width: 15%; /* 로고의 너비를 컨테이너의 10%로 설정 */
+        height: auto; /* 로고의 높이를 비율에 맞게 자동 조정 */
+    }
+
+    .info {
+        background-color: #f8f8f8;
+        border-left: 4px solid #46B4B4;
+        padding: 10px;
+        margin: 20px;
+        font-size: 0.9em;
+        color: #666;
+    }
+
+    hr {
+        border: 0;
+        height: 1px;
+        background-color: #46B4B4;
+        margin: 20px 0;
+    }
+
+    .info-box {
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        padding: 10px; /* 패딩 줄임 */
+        margin: 20px auto; /* 가운데 정렬 유지 */
+        font-size: 0.9em; /* 폰트 크기 조정 */
+        color: #666;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center; /* 텍스트 가운데 정렬 */
+        max-width: 90%; /* 최대 너비 설정 */
+    }
+
+    .info-box-summary {
+        background-color: #b0b0b0;
+        border: 1px solid #ddd;
+        padding: 10px; /* 패딩 줄임 */
+        margin: 20px auto; /* 가운데 정렬 유지 */
+        font-size: 0.9em; /* 폰트 크기 조정 */
+        color: #666;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center; /* 텍스트 가운데 정렬 */
+        max-width: 90%; /* 최대 너비 설정 */
+    }
+
+
+    .info-box-detail {
+        background-color: #d8f0ff;
+        border: 1px solid #ddd;
+        padding: 10px; /* 패딩 줄임 */
+        margin: 20px auto; /* 가운데 정렬 유지 */
+        font-size: 0.9em; /* 폰트 크기 조정 */
+        color: #666;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center; /* 텍스트 가운데 정렬 */
+        max-width: 90%; /* 최대 너비 설정 */
+    }
+
+    .divider {
+        border-top: 2px solid #4684B4;
+        margin: 30px 0;
+    }
+
+    .detail-section {
+        margin: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        border-left: 5px solid #839dca;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .summary-section {
+        margin: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        border-left: 5px solid #46B4B4;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+        margin: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        border-left: 5px solid #46B4B4;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+        background-color: #46B4B4;
+        color: white;
+        text-align: center;
+        padding: 1em 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-left, .footer-right {
+        margin: 0 20px;
+    }
+
+    h2 {
+        color: #46B4B4;
+        font-size: 1.5em;
+    }
+
+
+    article {
+        padding: 10px;
+        border-top: 1px solid #eaeaea;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        color: #333;
+    }
+
+    h4 {
+        font-size: 1.1em;
+        color: #666;
+    }
+    h5 {
+        font-size: 1.0em;
+        color: #474343;
+    }
+
+    p {
+        color: #666;
+    }
+
+    .container {
+        margin: auto;
+        width: 90%;
+        padding: 10px;
+    }
+
+    .toggle-button {
+        background-color: #839dca;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    #content {
+        display: none;
+        margin-top: 20px;
+        padding: 20px;
+        border: 2px solid #46B4B4;
+        border-radius: 5px;
+        background-color: #f8f8f8;
+    }
+
+    .summary {
+        display: none;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 8px;
+        margin-top: 4px;
+    }
+    .toggle {
+        cursor: pointer;
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+    .toggle:hover {
+        color: #003580;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .meta-info{
+        padding: 10px;
+        border-top: 1px solid #eaeaea;
+    }
+
+    .comments{
+        background-color: #d8f0ff;
+        border: 1px solid #ddd;
+        padding: 15px; /* 패딩 줄임 */
+        margin: 30px auto; /* 가운데 정렬 유지 */
+        font-size: 0.9em; /* 폰트 크기 조정 */
+        color: #666;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 90%; /* 최대 너비 설정 */
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .news{
+        background-color: #d2fade;
+        border: 1px solid #ddd;
+        padding: 15px; /* 패딩 줄임 */
+        margin: 30px auto; /* 가운데 정렬 유지 */
+        font-size: 0.9em; /* 폰트 크기 조정 */
+        color: #666;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 90%; /* 최대 너비 설정 */
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+
+</style>
+
+<html>
+<head>
+    <title>{{ date_year }} Week {{ date_week }}. Youtube Trending Report</title>
+    <link rel="stylesheet" type="text/css" href="src/report_format/style.css">
+</head>
+<body>
+    <header>
+        <img src="{{ logo }}" alt="Logo" class="logo">
+        <h1>{{ date_year }}년 {{ date_week }}주차 Youtube Trending Report</h1>
+    </header>
+
+    <div class="info-box"> <!-- info 박스 추가 -->
+        <p>ℹ️<strong><font color='red'>[개발중]</font></strong> <strong>해당 내용은 전기차 관련 Youtube 영상 중 관련성을 기반으로 선별된 영상을 AI를 기반으로 요약한 내용입니다. 특정 명칭에 다소 틀린점이 있을 수 있으니 유의바랍니다.</strong></p>
+    </div>
+
+    {% for summary in summary_list %}
+    <section class="summary-section">
+        <h2>키워드 : {{ summary.name }}</h2>
+        <article>
+            <h4>이번 주 {{ summary.name }} 관련 영상들의 주요 내용</h4>
+            <p>주요 내용 : </p>
+                {% for item in summary.contents %}
+                    <li>{{ item.main_summary }} <a href="#{{ summary.name }}-{{ loop.index }}" onclick="ensureVisibility('{{ summary.name }}-{{ loop.index }}', 'summary-{{ summary.name }}')">▶</a></li>
+                {% endfor %}
+        </article>
+
+        <div class="divider"></div>
+
+        <p><span class="toggle-button" onclick="toggleContent('summary-{{ summary.name }}')">(클릭) 키워드 관련 영상 정보</span></p>
+        <div id="summary-{{ summary.name }}" class="summary" style="display: none;">
+
+            <section class="detail-section">
+                {% for item in summary.contents %}
+                    <article class="grid" id="{{ summary.name }}-{{ loop.index }}">
+                        <div class="contents">
+                            <h5>{{ item.title }} (영상 길이 - {{ item.duration }}) <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">영상 링크</a></h5>
+                            <p><strong>채널 명</strong> : {{ item.channeltitle }}</p>
+                            <p><img src="{{ item.thumbnail }}" width="300"></p>
+
+                            <h5><strong>주요 내용</strong> : {{ item.main_summary }}</h5>
+                            <p><strong>요약 내용</strong> : </p>
+                            {% for content in item.summary_contents %}
+                                <li>{{ content }}</li>
+                            {% endfor %}
+                            <p><strong>긍부정 평가</strong> : {{ item.ai_eval }}</p>
+                        </div>
+                        <div class="meta-info">
+                            <p>조회수 : {{ item.viewCount }}</p>
+                            <p>좋아요 : {{ item.likeCount }}</p>
+                            <p>댓글수 : {{ item.commentCount }}</p>
+
+                            <div class="comments">
+                                {% for comment in item.comments %}
+                                    <li>(좋아요:{{ comment.likeCount }}) {{ comment.textOriginal }}</li>
+                                {% endfor %}
+                            </div>
+
+                            <div class="news">
+                                <b>관련 기사</b>
+                                {% for news_item in item.news %}
+                                    <li><a href="{{ news_item.link }}" target="_blank" rel="noopener noreferrer">{{ news_item.title }}</a></li>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %}
+            </section>
+
+        </div>
+    </section>
+    {% endfor %}
+
+    <script>
+        function toggleContent(elementId) {
+            var content = document.getElementById(elementId);
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+
+        function ensureVisibility(sectionId, contentId) {
+            var content = document.getElementById(contentId);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            }
+
+            var section = document.getElementById(sectionId);
+            section.scrollIntoView();
+        }
+    </script>
+
+    <footer>
+        <div class="footer-left">
+            Publication date :{{ date_today }}
+        </div>
+        <div class="footer-right">
+            Published by : {{ team_name }}
+        </div>
+    </footer>
+</body>
+</html>
