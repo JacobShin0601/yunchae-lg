@@ -10,17 +10,20 @@ This document provides an overview and description of key projects conducted for
 
 ### Project Description
 - **Objective**: Forecast the prices of key battery materials, including lithium, to support effective purchasing and strategic decision-making.
-- **Market Sentiment Scoring System**: Developed a system that gathers data from various sources, such as analyst reports, 10-K filings, and YouTube, to extract insights on lithium market trends. Leveraging LLMs (Claude 3 Haiku and Claude 3.5 Sonnet), this system extracts information on both supply and demand aspects, which are then used as features and leading indicators in a 12-month forecasting model. Led the AWS architecture design for this project.
-- **Long-term Lithium Price Forecasting Model**: In collaboration with LG AI Research, we are currently developing a five-year price forecasting model for lithium. The model is structured around an economic framework based on supply and demand, where parameters are fitted using deep learning techniques, achieving an 80% accuracy in backtesting. I specifically contributed by identifying key macroeconomic factors (liquidity and interest rate variables from the U.S. Treasury and Federal Reserve) and ensuring their statistical significance.
+- **Market Sentiment Scoring System**: Developed a system that gathers data from various sources, such as analyst reports, 10-K filings, and YouTube, to extract insights on lithium market trends. Leveraging LLMs (Claude 3 Haiku and Claude 3.5 Sonnet), this system extracts information on both supply and demand aspects, which are then used as features and leading indicators in a 12-month forecasting model. In 2023, our team conducted joint research with LG AI Research, resulting in a PoC. I took a leading role in significantly improving the engineering aspects, including determining input sources, designing the entire pipeline and structure, and implementing LLMOps. I also led the design and implementation of the AWS architecture for this project.
+- **Long-term Lithium Price Forecasting Model**: In collaboration with LG AI Research, we are currently developing a five-year price forecasting model for lithium. The model is structured around an economic framework based on supply and demand, where parameters are fitted using deep learning techniques, achieving an 80% accuracy in backtesting. I specifically contributed by identifying key macroeconomic factors (liquidity and interest rate variables from the U.S. Treasury and Federal Reserve) and ensuring their statistical significance. Additionally, I extracted a graph structure (edge-node structure) from professional institutional reports to map the entire value chain and identify causal relationships between factors. For some key elements, causal inference was conducted using a linear model.
 
 ### Technologies Used
 - **LLMs**: Claude 3 Haiku, Claude 3.5 Sonnet
-- **Statistical Analysis**: Correlation and Granger causality tests, normality and homoscedasticity tests, and non-parametric tests
-- **Data Sources**: Analyst & Research Institute reports, 10-K filings, YouTube (with future plans to add Reddit)
-- **Tools**: Python, LangChain, Pydantic, AWS (Bedrock architecture design and deployment)
+- **Statistical Analysis**: Correlation and Granger causality tests, normality and homoscedasticity tests, and non-parametric tests, causal inference with linear model
+- **Data Sources**: Analyst & Research Institute reports, 10-K filings, YouTube (with future plans to add Reddit), FRED dataset
+- **Tools**: Python, LangChain, Pydantic, AWS (LLMOps by Bedrock architecture design and deployment), Pydantic, LangChain
+
 
 ### Reference
 - **Reference1(Sentiment Scoring System)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/MarketSentimentScoringSystem
+- **Reference2(Graph Extraction Paper)**: https://arxiv.org/html/2404.16130v1
+- **Reference3(Graph Extraction Github by Microsoft)**: https://github.com/microsoft/graphrag 
 
 ### Outcomes
 - Successfully developed the Market Sentiment Scoring system, which serves as a key feature and leading indicator in the 12-month lithium price forecasting model.
@@ -31,13 +34,13 @@ This document provides an overview and description of key projects conducted for
 ## 2. GenAI-Related Projects
 
 ### Project Description
-- **YouTube Summarization System**: Developed a system to collect and summarize YouTube videos related to electric vehicle manufacturers, competitors, raw materials, and macroeconomic conditions. Contributed to significantly upgrading an existing prototype created by other team members. Utilized statistical analysis for keyword selection and enhanced content reliability by gathering relevant news articles. Referenced the "Chain of Density" paper to improve the quality of summaries and migrated the entire pipeline to AWS.
+- **YouTube Summarization System**: Developed a system to collect and summarize YouTube videos related to electric vehicle manufacturers, competitors, raw materials, and macroeconomic conditions. Contributed to significantly upgrading an existing prototype created by other team members. Utilized statistical analysis for keyword selection and enhanced content reliability by gathering relevant news articles. Referenced the "Chain of Density" paper to improve the quality of summaries and migrated the entire pipeline to AWS. News letter was deployed to the whole company weekly.
 - **Multimodal RAG (Retrieval-Augmented Generation)**: Built a multimodal RAG system using the Claude 3.5 Sonnet model to integrate reports on electric vehicles and lithium. This system allows the model to interpret not only text but also time-series charts and images, generating captions as needed. Internal customers can search and review documents via chat-based queries, initially designed for the strategy and MI departments and later expanded to other departments. I conducted this project independently, and due to internal recognition, six additional derivative products were developed. The AWS architecture was designed for this project.
 
 ### Technologies Used
-- **Summarization Models**: Statistical analysis for keyword selection, LLM-based text summarization (Chain of Density model)
+- **Summarization Models**: Statistical analysis for keyword selection, LLM-based text summarization (Chain of Density model), Google News API(SERPAPI)
 - **Multimodal RAG**: Document preprocessing techniques, Claude 3.5 Sonnet model for integrating electric vehicle and lithium-related reports, vector storage
-- **Tools**: Python, Unstructured.io, AWS (for summarizer pipeline migration and architecture design, OpenSearch, Lambda)
+- **Tools**: Python, Unstructured.io, AWS (for summarizer pipeline migration and architecture design, OpenSearch, Lambda), STREAMLIT
 
 ### Reference
 - **Reference1(Youtube Summarizer)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/YoutubeSummarizer
@@ -69,16 +72,19 @@ These projects contributed to strategic decision-making for LG Energy Solution a
 
 ### 프로젝트 설명
 - **목표**: 리튬을 포함한 주요 배터리 소재의 가격을 예측하여 효과적인 구매와 전략적 의사결정을 지원.
-- **Market Sentiment Scoring 시스템**: 애널리스트 리포트, 기업의 10-K 보고서, YouTube와 같은 다양한 소스에서 데이터를 수집하여 리튬 시황에 대한 정보를 추출하는 시스템을 개발하였습니다. 수요와 공급 요인을 모두 고려해 LLM(Claude 3 Haiku 및 Claude 3.5 Sonnet)을 활용하여 데이터를 추출하였으며, 12개월 예측 모델의 feature이자 선행 지표로 사용했습니다. 이 프로젝트의 AWS 아키텍처 설계를 주도했습니다.
-- **리튬 중장기 가격 예측 모델**: LG AI Research와 협업하여 리튬 가격의 5년 장기 예측 모델을 개발 중입니다. 수요 공급 기반의 경제 모델을 구성하여 파라미터를 딥러닝으로 피팅한 후, 가격 예측 모델을 설계하여 현재 백테스트 정확도 80%를 확보했습니다. 특히 저는 거시경제 기반의 주요 변수(미국 재무부 및 연준의 유동성 및 금리 관련 변수)를 발굴하고 통계적 유의성 확보에 기여했습니다.
+- **Market Sentiment Scoring 시스템**: 애널리스트 리포트, 기업의 10-K 보고서, YouTube와 같은 다양한 소스에서 데이터를 수집하여 리튬 시황에 대한 정보를 추출하는 시스템을 개발하였습니다. 수요와 공급 요인을 모두 고려해 LLM(Claude 3 Haiku 및 Claude 3.5 Sonnet)을 활용하여 데이터를 추출하였으며, 12개월 예측 모델의 feature이자 선행 지표로 사용했습니다. 2023년도에 저희 팀에서 LG AI Research와 공동연구해 PoC가 나온 상태였으며, 저는 input source 결정부터 전체적인 파이프라인과 구조, LLMOps 등 엔지니어링을 대폭 개선하고 이 프로젝트를 AWS 아키텍처 설계하고 구현하는데 주도했습니다.
+- **리튬 중장기 가격 예측 모델**: LG AI Research와 협업하여 리튬 가격의 5년 장기 예측 모델을 개발 중입니다. 수요 공급 기반의 경제 모델을 구성하여 파라미터를 딥러닝으로 피팅한 후, 가격 예측 모델을 설계하여 현재 백테스트 정확도 80%를 확보했습니다. 특히 저는 거시경제 기반의 주요 변수(미국 재무부 및 연준의 유동성 및 금리 관련 변수)를 발굴하고 통계적 유의성 확보에 기여했습니다. 추가로 전문 기관 레포트로부터 그래프 구조(edge-node structure)를 추출하여 전체 value chain을 파악하고 인자 간 인과관계 파악을 할 수 있도록 하였습니다. (일부 주요 요소에 대해 linear 모델을 통한 causal inference)
 
 ### 사용 기술
-- **통계 분석**: 상관관계 및 그레인저 인과성 검정, 정규성 및 등분산성 검정 및 비모수 검정
-- **데이터 소스**: Analyst & Research Institute 리포트, 10-K 보고서, YouTube (향후 Reddit 추가 예정)
-- **도구**: Python, LangChain, Pydantic, AWS (Bedrock 아키텍처 설계 및 배포)
+- **LLM들**: Claude 3 Haiku, Claude 3.5 Sonnet
+- **통계 분석**: 상관관계 및 그레인저 인과성 검정, 정규성 및 등분산성 검정 및 비모수 검정, 인과추론
+- **데이터 소스**: Analyst & Research Institute 리포트, 10-K 보고서, YouTube (향후 Reddit 추가 예정), FRED dataset
+- **도구**: Python, LangChain, Pydantic, AWS (Bedrock 아키텍처 설계 및 배포를 통한 LLMOps)
 
 ### Reference
 - **Reference1(Sentiment Scoring System)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/MarketSentimentScoringSystem
+- **Reference2(Graph Extraction Paper)**: https://arxiv.org/html/2404.16130v1
+- **Reference3(Graph Extraction Github by Microsoft)**: https://github.com/microsoft/graphrag 
 
 ### 성과
 - Market Sentiment Scoring 시스템을 성공적으로 개발하여, 12개월 리튬 가격 예측 모델의 주요 feature이자 선행 지표로 활용.
@@ -89,13 +95,13 @@ These projects contributed to strategic decision-making for LG Energy Solution a
 ## 2. 생성형 AI 관련 프로젝트
 
 ### 프로젝트 설명
-- **YouTube 요약 시스템**: 전기차 제조사, 경쟁사, 원자재 및 거시경제 시황과 관련된 유튜브 영상을 수집하고 요약하는 시스템을 개발하였습니다. 기존에 다른 인원이 제작한 프로토타입을 대대적으로 업그레이드하는데 기여했으며 키워드 선택에 통계 분석을 활용하고 영상과 유관한 뉴스기사를 수집해 유튜브 요약문에 대한 신뢰성을 강화하였습니다. Chain of Density 논문을 참조하여 요약문의 충실성을 개선하고 전체 파이프라인을 AWS로 이전하였습니다.
+- **YouTube 요약 시스템**: 전기차 제조사, 경쟁사, 원자재 및 거시경제 시황과 관련된 유튜브 영상을 수집하고 요약하는 시스템을 개발하였습니다. 기존에 다른 인원이 제작한 프로토타입을 대대적으로 업그레이드하는데 기여했으며 키워드 선택에 통계 분석을 활용하고 영상과 유관한 뉴스기사를 수집해 유튜브 요약문에 대한 신뢰성을 강화하였습니다. Chain of Density 논문을 참조하여 요약문의 충실성을 개선하고 전체 파이프라인을 AWS로 이전하였습니다. 개발 후 전사에 매주 메일로 배포 되고 있습니다.
 - **멀티모달 RAG (검색 강화 생성)**: Claude 3.5 Sonnet 모델을 활용하여 전기차 및 리튬 관련 보고서를 통합하는 RAG 시스템을 구축하였습니다. 단순히 텍스트뿐만이 아닌 시계열 차트나 그림 등도 LLM 모델이 읽고 캡션을 제작하는 방식으로 만들었습니다. 내부고객이 문서를 채팅 기반으로 검색하고 내용을 확인할 수 있도록 하여, 처음에는 전략 및 MI 부서에서 활용하였고 이후 다른 부서에도 전달되었습니다. 이 프로젝트는 전적으로 혼자 진행했으며 이후 내부적인 인정을 받아 6개의 파생 프로덕트로 제작되었으며, AWS로 아키텍처를 구성하였습니다.
 
 ### 사용 기술
-- **요약 모델**: 키워드 선택을 위한 통계 분석, LLM 기반 텍스트 요약 모델 (Chain of Density 모델).
-- **멀티모달 RAG**: 문서 전처리 기술 & 전기차 및 리튬 관련 보고서 통합을 위한 Claude 3.5 Sonnet 모델 & 벡터 스토
-- **도구**: Python, Unstructured.io, AWS(서머라이저 파이프라인 이전 및 아키텍처 설계, OpenSearch, Lambda...).
+- **요약 모델**: 키워드 선택을 위한 통계 분석, LLM 기반 텍스트 요약 모델 (Chain of Density 모델), Google News API(SERPAPI)
+- **멀티모달 RAG**: 문서 전처리 기술 & 전기차 및 리튬 관련 보고서 통합을 위한 Claude 3.5 Sonnet 모델 & 벡터 스토어
+- **도구**: Python, Unstructured.io, AWS(서머라이저 파이프라인 이전 및 아키텍처 설계, OpenSearch, Lambda...), Pydantic, LangChain
 
 ### Reference
 - **Reference1(Youtube Summarizer)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/YoutubeSummarizer
