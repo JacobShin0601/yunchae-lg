@@ -38,7 +38,7 @@ This document provides an overview and description of key projects conducted for
 - **Multimodal RAG (Retrieval-Augmented Generation)**: Built a multimodal RAG system using the Claude 3.5 Sonnet model to integrate reports on electric vehicles and lithium. This system allows the model to interpret not only text but also time-series charts and images, generating captions as needed. Internal customers can search and review documents via chat-based queries, initially designed for the strategy and MI departments and later expanded to other departments. I conducted this project independently, and due to internal recognition, six additional derivative products were developed. The AWS architecture was designed for this project.
 
 ### Technologies Used
-- **Summarization Models**: Statistical analysis for keyword selection, LLM-based text summarization (Chain of Density model), Google News API(SERPAPI)
+- **Summarization Models**: Statistical analysis for keyword selection, LLM-based text summarization (Chain of Density model)
 - **Multimodal RAG**: Document preprocessing techniques, Claude 3.5 Sonnet model for integrating electric vehicle and lithium-related reports, vector storage
 - **Tools**: Python, Unstructured.io, AWS (for summarizer pipeline migration and architecture design, OpenSearch, Lambda), STREAMLIT
 
@@ -99,7 +99,7 @@ These projects contributed to strategic decision-making for LG Energy Solution a
 - **멀티모달 RAG (검색 강화 생성)**: Claude 3.5 Sonnet 모델을 활용하여 전기차 및 리튬 관련 보고서를 통합하는 RAG 시스템을 구축하였습니다. 단순히 텍스트뿐만이 아닌 시계열 차트나 그림 등도 LLM 모델이 읽고 캡션을 제작하는 방식으로 만들었습니다. 내부고객이 문서를 채팅 기반으로 검색하고 내용을 확인할 수 있도록 하여, 처음에는 전략 및 MI 부서에서 활용하였고 이후 다른 부서에도 전달되었습니다. 이 프로젝트는 전적으로 혼자 진행했으며 이후 내부적인 인정을 받아 6개의 파생 프로덕트로 제작되었으며, AWS로 아키텍처를 구성하였습니다.
 
 ### 사용 기술
-- **요약 모델**: 키워드 선택을 위한 통계 분석, LLM 기반 텍스트 요약 모델 (Chain of Density 모델), Google News API(SERPAPI)
+- **요약 모델**: 키워드 선택을 위한 통계 분석, LLM 기반 텍스트 요약 모델 (Chain of Density 모델)
 - **멀티모달 RAG**: 문서 전처리 기술 & 전기차 및 리튬 관련 보고서 통합을 위한 Claude 3.5 Sonnet 모델 & 벡터 스토어
 - **도구**: Python, Unstructured.io, AWS(서머라이저 파이프라인 이전 및 아키텍처 설계, OpenSearch, Lambda...), Pydantic, LangChain
 
