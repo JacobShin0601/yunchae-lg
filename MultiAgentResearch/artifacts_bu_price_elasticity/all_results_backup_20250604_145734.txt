@@ -1,0 +1,37 @@
+
+==================================================
+## Analysis Stage: 북미 전기차 시장 분석 - 가격차이 및 탄력성 분석
+## Execution Time: 2025-06-04 14:54:23
+--------------------------------------------------
+Result Description: 
+
+1. 가격 차이 분석 결과:
+   - SUV 세그먼트: 모든 SUV 세그먼트에서 BEV와 ICE 간 가격 차이가 시간이 지남에 따라 감소하는 추세를 보임
+   - Non-SUV 세그먼트: 승용차 세그먼트에서도 가격 차이가 감소하는 추세를 보이나, 픽업트럭은 여전히 높은 가격 차이를 유지
+
+2. 가격 탄력성 분석 결과:
+   - SUV_D 세그먼트: BEV는 비탄력적(-0.761)인 반면, ICE는 정상 탄력적(-3.424)
+   - 픽업트럭: BEV는 매우 탄력적(-8.712), ICE는 정상 탄력적(-2.196)
+   - SUV_C 세그먼트: BEV는 중간 탄력적(-4.602), ICE는 정상 탄력적(-1.525)
+   - SUV_E_Tesla: 특이하게 BEV와 ICE 모두 가격과 판매량 간 관계가 없음(BEV: 37.048, ICE: 0.713)
+   - C 세그먼트: BEV는 비탄력적(-0.672), ICE는 정상 탄력적(-3.867)
+   - D 세그먼트: BEV와 ICE 모두 극도로 탄력적(BEV: -12.665, ICE: -11.98)
+
+3. 교차 상관관계 분석 결과:
+   - SUV 세그먼트: 대부분 음의 상관관계를 보이며, 특히 시차가 증가할수록 상관관계가 강해지는 경향
+   - Non-SUV 세그먼트: 픽업트럭은 양의 상관관계, 승용차 세그먼트는 음의 상관관계를 보임
+
+4. 그랜저 인과성 분석 결과:
+   - SUV 세그먼트: 대부분 시차 3-6개월에서 유의한 인과관계가 나타남(p-값 < 0.05)
+   - Non-SUV 세그먼트: 픽업트럭은 시차 1-3개월, 승용차는 시차 4-8개월에서 유의한 인과관계가 나타남
+
+--------------------------------------------------
+Generated Files:
+- ./artifacts/suv_price_diff_trend.png : SUV 세그먼트별 BEV-ICE 가격 차이 추이 그래프
+- ./artifacts/non_suv_price_diff_trend.png : Non-SUV 세그먼트별 BEV-ICE 가격 차이 추이 그래프
+- ./artifacts/price_elasticity_comparison.png : 세그먼트별 BEV와 ICE의 가격 탄력성 비교 그래프
+- ./artifacts/suv_cross_correlation.png : SUV 세그먼트 가격 차이와 판매량 간 교차 상관관계 그래프
+- ./artifacts/non_suv_cross_correlation.png : Non-SUV 세그먼트 가격 차이와 판매량 간 교차 상관관계 그래프
+- ./artifacts/suv_granger_causality.png : SUV 세그먼트 가격 차이가 판매량에 미치는 그랜저 인과성 p-값 그래프
+- ./artifacts/non_suv_granger_causality.png : Non-SUV 세그먼트 가격 차이가 판매량에 미치는 그랜저 인과성 p-값 그래프
+==================================================

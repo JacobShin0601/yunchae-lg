@@ -1,0 +1,24 @@
+project,Status(as of 2025.1Q),Product Type,Region,country,Mine Operator,Geology,Geology(ML),Extraction Type,Extraction Type(ML),Resource,CP,Capacity,Total_Cash_Cost,status,P.Start
+Salar de Atacama I,Existing operations,Carbonate,South America,Chile,Albemarle Corp,Salar,Salar,Evaporation,Evaporation,Brine,O,84.5,6518.115316113661,Ops,2015-03-01
+Salar de Atacama II,Existing operations,Carbonate,South America,Chile,SQM Salar SA,Salar,Salar,Evaporation,Evaporation,Brine,O,210.0,6518.115316113661,Ops,2015-03-01
+Olaroz,Existing operations,Carbonate,South America,Argentina,Sales de Jujuy SA,Salar,Salar,Evaporation,Evaporation,Brine,O,42.5,6924.080400000001,Ops,2015-03-01
+Salar del Hombre Muerto,Existing operations,Carbonate,South America,Argentina,Livent,Salar,Salar,Direct Extraction,Direct Extraction,Brine,O,51.2,7610.369300546326,Ops,2015-03-01
+Lakkor Tso Salt Lake,Existing operations,Hydroxide,Asia,China,"Zijin Mining Group Co., Ltd.",Salar,Salar,Direct Extraction,Direct Extraction,Brine,O,11.869902,8329.278502557512,Ops,2024-06-01
+Tres Quebradas,Committed projects,Carbonate,South America,Argentina,Liex SA,Salar,Salar,Evaporation,Evaporation,Brine,O,20.0,7000.0,Dev,2026-06-01
+Zabuye,Existing operations,Carbonate,Asia,China,"Tibet Shigatse Zabuye Lithium High-Tech Co., Ltd.",Salar,Salar,Evaporation,Evaporation,Brine,O,5.0,5849.60844281142,Ops,2015-03-01
+Jiezechaka,Existing operations,Carbonate,Asia,China,"Tibet Urban Development and Investment Co., Ltd.",Salar,Salar,Direct Extraction,Direct Extraction,Brine,O,9.0,8918.28818673015,Ops,2023-09-01
+Zabuye Phase 2,Existing operations,,Asia,China,"Tibet Shigatse Zabuye Lithium High-Tech Co., Ltd.",Salar,Salar,Evaporation,Evaporation,Brine,O,12.0,8482.547362327401,Dev,2025-03-01
+Centenario-Ratones Phase 2,Speculative projects,,South America,Argentina,Eramine Sudamérica SA,Salar,Salar,Direct Extraction,Direct Extraction,Brine,X,50.0,9346.763154580372,Dev,2027-06-01
+Rapasaari and Syväjärvi,Committed projects,Hydroxide,Europe,Finland,Keliber Oy,Spodumene,Spodumene,"Open pit, Underground",Open pit,Pegmatite,X,12.6,8152.367599403604,Dev,2026-06-01
+Mina da Cachoeira,Existing operations,Carbonate,South America,Brazil,Cia Brasileira de Lítio,Spodumene,Spodumene,Underground,Underground,Pegmatite,X,6.0,8641.89,Ops,2022-03-01
+Mt Holland,Existing operations,Hydroxide,Oceania,Australia,Covalent Lithium Pty. Ltd.,Spodumene,Spodumene,Open pit,Open pit,Pegmatite,X,50.0,9043.07278090496,Ops,2024-06-01
+Greenbushes,Existing operations,Carbonate,Oceania,Australia,Talison Lithium Pty. Ltd.,Spodumene,Spodumene,Open pit,Open pit,Pegmatite,X,246.31,8143.506,Ops,2015-03-01
+Neves,Committed projects,,South America,Brazil,Atlas Lithium Corp,Spodumene,Spodumene,Open pit,Open pit,Pegmatite,X,44.4,8988.073588105086,Dev,2026-06-01
+Greenbushes Phase 4,Committed projects,Carbonate,Oceania,Australia,Talison Lithium Pty. Ltd.,Spodumene,Spodumene,Open pit,Open pit,Pegmatite,X,77.2,8662.5,Dev,2026-06-01
+Dechenongba,Probable projects,,Asia,China,"Contemporary Amperex Technology Co., Ltd.",Spodumene,Spodumene,Open pit,Open pit,Pegmatite,O,44.51,8084.007333085957,Dev,2029-12-01
+Murong,Probable projects,,Asia,China,Other,Spodumene,Spodumene,Open pit,Open pit,Pegmatite,O,7.0,9255.733462425038,Dev,2027-06-01
+Greenbushes Phase 5,Probable projects,Carbonate,Oceania,Australia,Talison Lithium Pty. Ltd.,Spodumene,Spodumene,Open pit,Open pit,Pegmatite,X,77.16,8662.5,Dev,2029-06-01
+Pilgangoora Phase 4,Probable projects,,Oceania,Australia,Pilgangoora Operations Pty. Ltd.,Spodumene,Spodumene,Open pit,Open pit,Pegmatite,X,80.0,8735.12556599949,Dev,2028-06-01
+Yajiang Cuola,Possible projects,,Asia,China,"Sichuan Tianqi Shenghe Lithium Co., Ltd.",Spodumene,Spodumene,"Open pit, Underground",Open pit,Pegmatite,O,13.0,7713.441299365129,Dev,2027-06-01
+Mt Holland Phase 2,Speculative projects,,Oceania,Australia,Covalent Lithium Pty. Ltd.,Spodumene,Spodumene,Open pit,Open pit,Pegmatite,X,50.0,8125.008315762083,Dev,2027-06-01
+Aketasi,Speculative projects,,Asia,China,"Xinjiang Dongli Mining Investment Co., Ltd.",Spodumene,Spodumene,Open pit,Open pit,Pegmatite,O,10.0,9109.419451255992,Dev,2029-12-01

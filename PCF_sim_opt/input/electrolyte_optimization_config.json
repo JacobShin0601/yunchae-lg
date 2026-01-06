@@ -1,0 +1,42 @@
+{
+  "description": "전해액 용매 최적화 설정",
+  "version": "1.0",
+  "solvents": ["EC", "DMC", "EMC"],
+  "solvent_emissions": {
+    "EC": 3.45,
+    "DMC": 2.87,
+    "EMC": 3.12
+  },
+  "min_ratios": {
+    "EC": 0.2,
+    "DMC": 0.1,
+    "EMC": 0.0
+  },
+  "max_ratios": {
+    "EC": 0.5,
+    "DMC": 0.6,
+    "EMC": 0.6
+  },
+  "notes": {
+    "EC": "Ethylene Carbonate - 전기화학적 안정성을 위해 최소 20% 필요",
+    "DMC": "Dimethyl Carbonate - 이온 전도도 향상, 최소 10% 필요",
+    "EMC": "Ethyl Methyl Carbonate - 점도 조절용, 선택적"
+  },
+  "typical_ratios": {
+    "standard": {
+      "EC": 0.3,
+      "DMC": 0.5,
+      "EMC": 0.2
+    },
+    "high_performance": {
+      "EC": 0.35,
+      "DMC": 0.45,
+      "EMC": 0.2
+    },
+    "low_cost": {
+      "EC": 0.25,
+      "DMC": 0.6,
+      "EMC": 0.15
+    }
+  }
+}

@@ -1,0 +1,68 @@
+series_id,title,units,frequency,seasonal_adjustment,last_updated
+T10YIE,10-Year Breakeven Inflation Rate,Percent,Daily,Not Seasonally Adjusted,2025-04-24 16:01:08-05
+IORB,Interest Rate on Reserve Balances (IORB Rate),Percent,"Daily, 7-Day",Not Seasonally Adjusted,2025-04-24 15:31:37-05
+SOFR,Secured Overnight Financing Rate,Percent,Daily,Not Seasonally Adjusted,2025-04-24 07:02:04-05
+RRPONTSYAWARD,Overnight Reverse Repurchase Agreements Award Rate: Treasury Securities Sold by the Federal Reserve in the Temporary Open Market Operations,Percent,Daily,Not Seasonally Adjusted,2025-04-24 13:01:04-05
+EFFR,Effective Federal Funds Rate,Percent,Daily,Not Seasonally Adjusted,2025-04-24 08:01:05-05
+FEDFUNDS,Federal Funds Effective Rate,Percent,Monthly,Not Seasonally Adjusted,2025-04-01 15:17:14-05
+DFF,Federal Funds Effective Rate,Percent,"Daily, 7-Day",Not Seasonally Adjusted,2025-04-24 15:16:45-05
+MORTGAGE30US,30-Year Fixed Rate Mortgage Average in the United States,Percent,"Weekly, Ending Thursday",Not Seasonally Adjusted,2025-04-24 11:01:04-05
+MORTGAGE15US,15-Year Fixed Rate Mortgage Average in the United States,Percent,"Weekly, Ending Thursday",Not Seasonally Adjusted,2025-04-24 11:01:04-05
+MORTGAGE5US,5/1-Year Adjustable Rate Mortgage Average in the United States (DISCONTINUED),Percent,"Weekly, Ending Thursday",Not Seasonally Adjusted,2022-11-10 11:01:06-06
+T10Y2Y,10-Year Treasury Constant Maturity Minus 2-Year Treasury Constant Maturity,Percent,Daily,Not Seasonally Adjusted,2025-04-24 16:01:12-05
+T10Y3M,10-Year Treasury Constant Maturity Minus 3-Month Treasury Constant Maturity,Percent,Daily,Not Seasonally Adjusted,2025-04-24 16:01:10-05
+GS10,"Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis",Percent,Monthly,Not Seasonally Adjusted,2025-04-01 15:16:46-05
+GS2,"Market Yield on U.S. Treasury Securities at 2-Year Constant Maturity, Quoted on an Investment Basis",Percent,Monthly,Not Seasonally Adjusted,2025-04-01 15:16:48-05
+GS3M,"Market Yield on U.S. Treasury Securities at 3-Month Constant Maturity, Quoted on an Investment Basis",Percent,Monthly,Not Seasonally Adjusted,2025-04-01 15:16:54-05
+BAA,Moody's Seasoned Baa Corporate Bond Yield,Percent,Monthly,Not Seasonally Adjusted,2025-04-01 10:17:05-05
+AAA,Moody's Seasoned Aaa Corporate Bond Yield,Percent,Monthly,Not Seasonally Adjusted,2025-04-01 10:17:02-05
+TEDRATE,TED Spread (DISCONTINUED),Percent,Daily,Not Seasonally Adjusted,2022-01-28 16:01:02-06
+PRIME,Bank Prime Loan Rate Changes: Historical Dates of Changes and Rates,Percent,Not Applicable,Not Seasonally Adjusted,2025-01-08 09:11:23-06
+T5YIE,5-Year Breakeven Inflation Rate,Percent,Daily,Not Seasonally Adjusted,2025-04-24 16:01:06-05
+GDP,Gross Domestic Product,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-03-27 08:03:26-05
+GDPC1,Real Gross Domestic Product,Billions of Chained 2017 Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-03-27 08:03:25-05
+GDPPOT,Real Potential Gross Domestic Product,Billions of Chained 2017 Dollars,Quarterly,Not Seasonally Adjusted,2025-03-17 15:44:02-05
+PCE,Personal Consumption Expenditures,Billions of Dollars,Monthly,Seasonally Adjusted Annual Rate,2025-03-28 07:43:20-05
+PCEC,Personal Consumption Expenditures,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-03-27 08:02:09-05
+DPI,Disposable Personal Income,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-03-27 08:03:28-05
+DSPIC96,Real Disposable Personal Income,Billions of Chained 2017 Dollars,Monthly,Seasonally Adjusted Annual Rate,2025-03-28 07:43:17-05
+W875RX1,Real personal income excluding current transfer receipts,Billions of Chained 2017 Dollars,Monthly,Seasonally Adjusted Annual Rate,2025-03-28 07:43:35-05
+TOTALSL,Total Consumer Credit Owned and Securitized,Millions of Dollars,Monthly,Seasonally Adjusted,2025-04-07 14:02:13-05
+GDPDEF,Gross Domestic Product: Implicit Price Deflator,Index 2017=100,Quarterly,Seasonally Adjusted,2025-03-27 08:03:25-05
+A939RX0Q048SBEA,Real gross domestic product per capita,Chained 2017 Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-03-27 08:03:00-05
+PSAVERT,Personal Saving Rate,Percent,Monthly,Seasonally Adjusted Annual Rate,2025-03-28 07:43:30-05
+RRSFS,Advance Real Retail and Food Services Sales,Millions of 1982-84 CPI Adjusted Dollars,Monthly,Seasonally Adjusted,2025-04-16 07:44:01-05
+A191RL1Q225SBEA,Real Gross Domestic Product,Percent Change from Preceding Period,Quarterly,Seasonally Adjusted Annual Rate,2025-03-27 08:03:47-05
+MEHOINUSA672N,Real Median Household Income in the United States,2023 C-CPI-U Dollars,Annual,Not Seasonally Adjusted,2024-09-11 09:45:01-05
+ICSA,Initial Claims,Number,"Weekly, Ending Saturday",Seasonally Adjusted,2025-04-24 07:48:02-05
+PAYEMS,"All Employees, Total Nonfarm",Thousands of Persons,Monthly,Seasonally Adjusted,2025-04-04 07:49:00-05
+UNRATE,Unemployment Rate,Percent,Monthly,Seasonally Adjusted,2025-04-04 07:48:18-05
+JTSJOL,Job Openings: Total Nonfarm,Level in Thousands,Monthly,Seasonally Adjusted,2025-04-01 09:06:32-05
+CES0500000003,"Average Hourly Earnings of All Employees, Total Private",Dollars per Hour,Monthly,Seasonally Adjusted,2025-04-04 07:49:18-05
+CPIAUCSL,Consumer Price Index for All Urban Consumers: All Items in U.S. City Average,Index 1982-1984=100,Monthly,Seasonally Adjusted,2025-04-10 07:39:55-05
+CPILFESL,Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average,Index 1982-1984=100,Monthly,Seasonally Adjusted,2025-04-10 07:39:57-05
+PCEPI,Personal Consumption Expenditures: Chain-type Price Index,Index 2017=100,Monthly,Seasonally Adjusted,2025-03-28 07:43:24-05
+PCEPILFE,Personal Consumption Expenditures Excluding Food and Energy (Chain-Type Price Index),Index 2017=100,Monthly,Seasonally Adjusted,2025-03-28 07:43:25-05
+WPSFD49207,Producer Price Index by Commodity: Final Demand: Finished Goods,Index 1982=100,Monthly,Seasonally Adjusted,2025-04-11 07:56:26-05
+MICH,University of Michigan: Inflation Expectation,Percent,Monthly,Not Seasonally Adjusted,2025-03-28 10:01:01-05
+PPIFGS,Producer Price Index by Commodity for Finished Goods (DISCONTINUED),Index 1982=100,Monthly,Seasonally Adjusted,2016-01-15 08:11:06-06
+CPIENGSL,Consumer Price Index for All Urban Consumers: Energy in U.S. City Average,Index 1982-1984=100,Monthly,Seasonally Adjusted,2025-04-10 07:39:55-05
+CPIFABSL,Consumer Price Index for All Urban Consumers: Food and Beverages in U.S. City Average,Index 1982-1984=100,Monthly,Seasonally Adjusted,2025-04-10 07:37:34-05
+DEXUSEU,U.S. Dollars to Euro Spot Exchange Rate,U.S. Dollars to One Euro,Daily,Not Seasonally Adjusted,2025-04-21 15:19:48-05
+DEXKOUS,South Korean Won to U.S. Dollar Spot Exchange Rate,South Korean Won to One U.S. Dollar,Daily,Not Seasonally Adjusted,2025-04-21 15:19:44-05
+DTWEXBGS,Nominal Broad U.S. Dollar Index,Index Jan 2006=100,Daily,Not Seasonally Adjusted,2025-04-21 15:19:50-05
+DTWEXM,Nominal Major Currencies U.S. Dollar Index (Goods Only) (DISCONTINUED),Index Mar 1973=100,Daily,Not Seasonally Adjusted,2020-01-06 15:49:01-06
+WM2NS,M2,Billions of Dollars,"Weekly, Ending Monday",Not Seasonally Adjusted,2025-04-22 12:00:59-05
+TREAST,Assets: Securities Held Outright: U.S. Treasury Securities: All: Wednesday Level,Millions of U.S. Dollars,"Weekly, As of Wednesday",Not Seasonally Adjusted,2025-04-24 15:34:15-05
+WLCFLL,Assets: Liquidity and Credit Facilities: Loans: Wednesday Level,Millions of U.S. Dollars,"Weekly, As of Wednesday",Not Seasonally Adjusted,2025-04-24 15:35:38-05
+WDTGAL,"Liabilities and Capital: Liabilities: Deposits with F.R. Banks, Other Than Reserve Balances: U.S. Treasury, General Account: Wednesday Level",Millions of U.S. Dollars,"Weekly, As of Wednesday",Not Seasonally Adjusted,2025-04-24 15:35:24-05
+WRBWFRBL,Liabilities and Capital: Other Factors Draining Reserve Balances: Reserve Balances with Federal Reserve Banks: Wednesday Level,Millions of U.S. Dollars,"Weekly, As of Wednesday",Not Seasonally Adjusted,2025-04-24 15:33:27-05
+WLRRAL,Liabilities and Capital: Liabilities: Reverse Repurchase Agreements: Wednesday Level,Millions of U.S. Dollars,"Weekly, As of Wednesday",Not Seasonally Adjusted,2025-04-24 15:33:57-05
+TERMCBAUTO48NS,"Finance Rate on Consumer Installment Loans at Commercial Banks, New Autos 48 Month Loan",Percent,Monthly,Not Seasonally Adjusted,2025-04-07 14:02:01-05
+RIFLPBCIANM60NM,"Finance Rate on Consumer Installment Loans at Commercial Banks, New Autos 60 Month Loan",Percent,Monthly,Not Seasonally Adjusted,2025-04-07 14:01:57-05
+RIFLPBCIANM72NM,"Finance Rate on Consumer Installment Loans at Commercial Banks, New Autos 72 Month Loan",Percent,Monthly,Not Seasonally Adjusted,2025-04-07 14:02:00-05
+RIELPCFAUNQ,"Average Finance Rate of Used Car Loans at Finance Companies, Amount of Finance Weighted",Percent,Quarterly,Not Seasonally Adjusted,2025-03-26 13:18:06-05
+CARACBW027SBOG,"Consumer Loans: Other Consumer Loans: Automobile Loans, All Commercial Banks",Billions of U.S. Dollars,Weekly,Seasonally Adjusted,2025-04-18 15:32:33-05
+RIELPCFANNM,"Average Finance Rate of New Car Loans at Finance Companies, Amount of Finance Weighted",Percent,Monthly,Not Seasonally Adjusted,2025-03-07 14:01:50-06
+DTCTLVEUANQ,Average Amount Financed for Used Car Loans at Finance Companies,Dollars,Quarterly,Not Seasonally Adjusted,2025-03-26 13:18:14-05
+STDSAUTO,Net Percentage of Domestic Banks Tightening Standards for Auto Loans,Percent,Quarterly,Not Seasonally Adjusted,2025-02-03 13:19:28-06

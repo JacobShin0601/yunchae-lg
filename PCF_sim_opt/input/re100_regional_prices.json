@@ -1,0 +1,63 @@
+{
+  "description": "RE100 지역별 가격 프리미엄 설정",
+  "version": "1.0",
+  "unit": "$/kWh (renewable energy premium over conventional electricity)",
+  "regional_prices": {
+    "Korea": {
+      "tier1": 0.15,
+      "tier2": 0.12,
+      "note": "한국 전력 RE100 프리미엄 (REC 가격 기준)"
+    },
+    "China": {
+      "tier1": 0.20,
+      "tier2": 0.18,
+      "note": "중국은 재생에너지 인프라가 덜 발달하여 높은 프리미엄"
+    },
+    "USA": {
+      "tier1": 0.10,
+      "tier2": 0.08,
+      "note": "미국은 재생에너지 시장이 발달하여 낮은 프리미엄"
+    },
+    "Europe": {
+      "tier1": 0.12,
+      "tier2": 0.10,
+      "note": "유럽은 중간 수준 프리미엄"
+    },
+    "Japan": {
+      "tier1": 0.18,
+      "tier2": 0.15,
+      "note": "일본은 높은 에너지 비용으로 인한 높은 프리미엄"
+    },
+    "default": {
+      "tier1": 0.15,
+      "tier2": 0.12,
+      "note": "기타 지역 기본값"
+    }
+  },
+  "notes": {
+    "tier1": "Tier1은 자재 제조 단계의 직접 에너지 소비에 대한 RE100 프리미엄",
+    "tier2": "Tier2는 전구체/원료 제조 단계의 간접 에너지 소비에 대한 RE100 프리미엄",
+    "calculation": "RE100 Cost = Energy Consumption (kWh/kg) × RE100 Rate (0~1) × Regional Premium ($/kWh) × Quantity (kg)"
+  },
+  "data_sources": {
+    "Korea": "한국 REC(Renewable Energy Certificate) 시장 가격",
+    "China": "중국 녹색 전력 거래 시장 가격",
+    "USA": "미국 PPA(Power Purchase Agreement) 평균 가격",
+    "Europe": "유럽 Guarantees of Origin(GO) 가격",
+    "Japan": "일본 FIT(Feed-in Tariff) 제도 가격"
+  },
+  "typical_scenarios": {
+    "conservative": {
+      "description": "보수적 시나리오 - 높은 RE100 프리미엄",
+      "multiplier": 1.5
+    },
+    "baseline": {
+      "description": "기준 시나리오 - 현재 시장 가격",
+      "multiplier": 1.0
+    },
+    "optimistic": {
+      "description": "낙관적 시나리오 - 낮은 RE100 프리미엄 (재생에너지 가격 하락)",
+      "multiplier": 0.7
+    }
+  }
+}

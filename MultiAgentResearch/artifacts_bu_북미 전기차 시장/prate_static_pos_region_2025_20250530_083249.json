@@ -1,0 +1,86 @@
+{
+    "target_year": 2025,
+    "pos_share": {
+        "data": [
+            {
+                "POS(MI)": "Standard",
+                "Vehicle Volume": 39009355,
+                "share_pct": 43.81
+            },
+            {
+                "POS(MI)": "Affordable",
+                "Vehicle Volume": 27525075,
+                "share_pct": 30.91
+            },
+            {
+                "POS(MI)": "Entry",
+                "Vehicle Volume": 11295208,
+                "share_pct": 12.69
+            },
+            {
+                "POS(MI)": "Premium",
+                "Vehicle Volume": 11212515,
+                "share_pct": 12.59
+            }
+        ],
+        "total_volume": 89042153,
+        "top_3": [
+            {
+                "POS(MI)": "Standard",
+                "share_pct": 43.81
+            },
+            {
+                "POS(MI)": "Affordable",
+                "share_pct": 30.91
+            },
+            {
+                "POS(MI)": "Entry",
+                "share_pct": 12.69
+            }
+        ]
+    },
+    "region_share": {
+        "data": [
+            {
+                "Region(최종)": "Greater China",
+                "Vehicle Volume": 30228648,
+                "share_pct": 33.95
+            },
+            {
+                "Region(최종)": "R.O.W",
+                "Vehicle Volume": 27079339,
+                "share_pct": 30.41
+            },
+            {
+                "Region(최종)": "Europe",
+                "Vehicle Volume": 16607645,
+                "share_pct": 18.65
+            },
+            {
+                "Region(최종)": "North America",
+                "Vehicle Volume": 15126521,
+                "share_pct": 16.99
+            }
+        ],
+        "total_volume": 89042153,
+        "top_3": [
+            {
+                "Region(최종)": "Greater China",
+                "share_pct": 33.95
+            },
+            {
+                "Region(최종)": "R.O.W",
+                "share_pct": 30.41
+            },
+            {
+                "Region(최종)": "Europe",
+                "share_pct": 18.65
+            }
+        ]
+    },
+    "summary": {
+        "pos_count": 4,
+        "region_count": 4,
+        "total_records": 28499
+    }
+}

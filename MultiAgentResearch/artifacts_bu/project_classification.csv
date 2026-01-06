@@ -1,0 +1,228 @@
+project,Region,country,Status(as of 2025.1Q),Extraction Type,Resource,Geology,Total_Cash_Cost,Capacity,Size_Category,Cost_Quartile
+Salar de Atacama I,South America,Chile,Existing operations,Evaporation,Brine,Salar,6518.115316113661,84.5,Large (50-100kt),Q1 (Low Cost)
+Salar de Atacama II,South America,Chile,Existing operations,Evaporation,Brine,Salar,6518.115316113661,210.0,Very Large (>100kt),Q1 (Low Cost)
+Olaroz,South America,Argentina,Existing operations,Evaporation,Brine,Salar,6924.080400000001,42.5,Medium (30-50kt),Q1 (Low Cost)
+Salar del Hombre Muerto,South America,Argentina,Existing operations,Direct Extraction,Brine,Salar,7610.369300546326,51.2,Large (50-100kt),Q1 (Low Cost)
+Chaerhan Lake,Asia,china,Existing operations,Direct Extraction,Brine,Salar,9426.19624119661,38.771974,Medium (30-50kt),Q1 (Low Cost)
+Yiliping,Asia,China,Existing operations,Direct Extraction,Brine,Salar,22107.780364899536,14.0,Small (10-30kt),Q4 (High Cost)
+Silver Peak,North America,United States,Existing operations,Evaporation,Brine,Salar,9451.22672791544,6.0,Very Small (<10kt),Q1 (Low Cost)
+Cauchari-Olaroz,South America,Argentina,Existing operations,Evaporation,Brine,Salar,10056.782400000002,40.0,Medium (30-50kt),Q1 (Low Cost)
+East Taijnar,Asia,China,Existing operations,Evaporation,Brine,Salar,9996.752562340114,20.0,Small (10-30kt),Q1 (Low Cost)
+West Taijnar I,Asia,China,Existing operations,"Evaporation,Direct Extraction",Brine,Salar,10229.96276241484,10.0,Very Small (<10kt),Q1 (Low Cost)
+West Taijnar II,Asia,China,Existing operations,Direct Extraction,Brine,Salar,10457.83803300219,5.0,Very Small (<10kt),Q1 (Low Cost)
+West Taijnar III,Asia,China,Existing operations,Direct Extraction,Brine,Salar,11025.66705268411,20.0,Small (10-30kt),Q2
+Sal de Oro,South America,Argentina,Existing operations,Direct Extraction,Brine,Salar,12872.008901120018,22.0,Small (10-30kt),Q3
+Sal de Vida,South America,Argentina,Committed projects,Direct Extraction,Brine,Salar,12353.022140264113,15.0,Small (10-30kt),Q2
+Salar del Rincón I,South America,Argentina,Existing operations,Evaporation,Brine,Salar,17947.0,2.0,Very Small (<10kt),Q4 (High Cost)
+Salar del Rincón II,South America,Argentina,Committed projects,Direct Extraction,Brine,Salar,12432.126070381455,3.0,Very Small (<10kt),Q2
+Maricunga,South America,Chile,Speculative projects,Direct Extraction,Brine,Salar,12629.066683713554,15.2,Small (10-30kt),Q3
+Salar de Uyuni,South America,Bolivia,Speculative projects,Direct Extraction,Brine,Salar,19600.0,25.0,Small (10-30kt),Q4 (High Cost)
+Qarhan I,Asia,China,Existing operations,Direct Extraction,Brine,Salar,23650.0,10.0,Very Small (<10kt),Q4 (High Cost)
+Qarhan II,Asia,China,Existing operations,Direct Extraction,Brine,Salar,10249.886855718209,40.0,Medium (30-50kt),Q1 (Low Cost)
+Balun Mahai,Asia,China,Existing operations,Direct Extraction,Brine,Salar,22550.0,3.0,Very Small (<10kt),Q4 (High Cost)
+Paradox,North America,United States,Speculative projects,Direct Extraction,Brine,Oilfield,22770.0,13.07,Small (10-30kt),Q4 (High Cost)
+Kachi,South America,Argentina,Speculative projects,Direct Extraction,Brine,Salar,10142.78751631923,18.0,Small (10-30kt),Q1 (Low Cost)
+Upper Rhine Valley,Europe,Germany,Speculative projects,Direct Extraction,Brine,Geothermal,15354.092510956541,35.2,Medium (30-50kt),Q4 (High Cost)
+Hell's Kitchen,North America,United States,Speculative projects,Direct Extraction,Brine,Geothermal,16174.037346826019,10.0,Very Small (<10kt),Q4 (High Cost)
+Centenario-Ratones,South America,Brazil,Existing operations,Direct Extraction,Brine,Salar,12584.169283234898,24.0,Small (10-30kt),Q2
+Lakkor Tso Salt Lake,Asia,China,Existing operations,Direct Extraction,Brine,Salar,8329.278502557512,11.869902,Small (10-30kt),Q1 (Low Cost)
+Pastos Grandes,South America,Argentina,Speculative projects,Evaporation,Brine,Salar,11657.356481722269,24.0,Small (10-30kt),Q2
+Tres Quebradas,South America,Argentina,Committed projects,Evaporation,Brine,Salar,7000.0,20.0,Small (10-30kt),Q1 (Low Cost)
+Zabuye,Asia,China,Existing operations,Evaporation,Brine,Salar,5849.60844281142,5.0,Very Small (<10kt),Q1 (Low Cost)
+Baqiancuo,Asia,China,Existing operations,Direct Extraction,Brine,Salar,9500.0,10.0,Very Small (<10kt),Q1 (Low Cost)
+Da Qaidam I,Asia,China,Existing operations,Evaporation,Brine,Salar,14455.231239739773,5.0,Very Small (<10kt),Q3
+Jiezechaka,Asia,China,Existing operations,Direct Extraction,Brine,Salar,8918.28818673015,9.0,Very Small (<10kt),Q1 (Low Cost)
+El Dorado,North America,United States,Speculative projects,Direct Extraction,Brine,Oilfield,13818.73231646484,5.4,Very Small (<10kt),Q3
+Prairie,North America,Canada,Speculative projects,Direct Extraction,Brine,Oilfield,18949.759742635022,2.0,Very Small (<10kt),Q4 (High Cost)
+Sal de los Angeles,South America,Argentina,Existing operations,Direct Extraction,Brine,Salar,10720.06115661863,8.0,Very Small (<10kt),Q1 (Low Cost)
+Tolillar,South America,Argentina,Speculative projects,Direct Extraction,Brine,Salar,11568.2604955992,25.0,Small (10-30kt),Q2
+Clearwater,North America,Canada,Possible projects,Direct Extraction,Brine,Oilfield,13937.95145560574,28.38,Small (10-30kt),Q3
+Great Salt Lake,North America,United States,Existing operations,Evaporation,Brine,Salar,11248.34643201336,9.0,Very Small (<10kt),Q2
+Centenario-Ratones,South America,Argentina,Existing operations,Direct Extraction,Brine,Salar,12584.1692832349,24.0,Small (10-30kt),Q2
+Hombre Muerto West,South America,Argentina,Committed projects,Evaporation,Brine,Salar,12119.372001717651,30.0,Small (10-30kt),Q2
+Salar de Llullaillaco,South America,Argentina,Existing operations,Evaporation,Brine,Salar,11962.21257509191,17.42,Small (10-30kt),Q2
+Salar del Rincón II,South America,Argentina,Committed projects,Direct Extraction,Brine,Salar,12432.126070381459,3.0,Very Small (<10kt),Q2
+Silver Peak Phase 2,North America,United States,Possible projects,Evaporation,Brine,Salar,15209.9780391043,5.0,Very Small (<10kt),Q4 (High Cost)
+Laguocuo,Asia,China,Committed projects,Direct Extraction,Brine,Salar,11147.45898760657,18.0,Small (10-30kt),Q2
+Qarhan II Phase 2,Asia,China,Committed projects,Direct Extraction,Brine,Salar,10249.886855718209,37.0,Medium (30-50kt),Q1 (Low Cost)
+Zabuye Phase 2,Asia,China,Existing operations,Evaporation,Brine,Salar,8482.547362327401,12.0,Small (10-30kt),Q1 (Low Cost)
+Sal de Oro Phase 2,South America,Argentina,Probable projects,Evaporation,Brine,Salar,14182.53536311891,0.0,,Q3
+Salar de Atacama I Phase 4,South America,Chile,Probable projects,Evaporation,Brine,Salar,12530.69769121166,40.0,Medium (30-50kt),Q2
+Salar de Atacama II Phase 5,South America,Chile,Probable projects,Evaporation,Brine,Salar,12530.69769121166,38.8,Medium (30-50kt),Q2
+Salar de Atacama II Phase 6,South America,Chile,Probable projects,Direct Extraction,Brine,Salar,10947.40134441718,70.0,Large (50-100kt),Q2
+Salar del Hombre Muerto Phase 3,South America,Argentina,Probable projects,Direct Extraction,Brine,Salar,12138.472586840811,30.0,Small (10-30kt),Q2
+East Taijnar Phase 2,Asia,China,Probable projects,Direct Extraction,Brine,Salar,10523.80286486723,10.0,Very Small (<10kt),Q1 (Low Cost)
+Jiezechaka Phase 2,Asia,China,Probable projects,Direct Extraction,Brine,Salar,11147.45898760657,18.0,Small (10-30kt),Q2
+Cauchari,South America,Argentina,Possible projects,Evaporation,Brine,Salar,13221.133176134988,25.0,Small (10-30kt),Q3
+Cauchari-Olaroz Phase 2,South America,Argentina,Possible projects,Evaporation,Brine,Salar,11749.69557795382,20.0,Small (10-30kt),Q2
+Centenario-Ratones Phase 2,South America,Argentina,Speculative projects,Direct Extraction,Brine,Salar,9346.763154580372,50.0,Medium (30-50kt),Q1 (Low Cost)
+Doncella,South America,Argentina,Speculative projects,Direct Extraction,Brine,Salar,14178.724109781158,3.0,Very Small (<10kt),Q3
+Pozuelos,South America,Argentina,Possible projects,Evaporation,Brine,Salar,13221.133176134988,25.0,Small (10-30kt),Q3
+Sal de Oro Phase 3,South America,Argentina,Possible projects,Evaporation,Brine,Salar,14182.53536311891,0.0,,Q3
+Sal de Vida Phase 2,South America,Argentina,Possible projects,Evaporation,Brine,Salar,14182.53536311891,0.0,,Q3
+Salar del Rincón I Phase 2,South America,Argentina,Possible projects,Evaporation,Brine,Salar,11994.09436585657,10.0,Very Small (<10kt),Q2
+Salar del Rincón II Phase 2,South America,Argentina,Speculative projects,Direct Extraction,Brine,Salar,13240.23376125816,25.0,Small (10-30kt),Q3
+Tres Quebradas Phase 2,South America,Argentina,Possible projects,Evaporation,Brine,Salar,12119.372001717651,30.0,Small (10-30kt),Q2
+Laguocuo Phase 2,Asia,China,Possible projects,Direct Extraction,Brine,Salar,11052.596582242391,21.75,Small (10-30kt),Q2
+Qarhan I Phase 2,Asia,China,Possible projects,Direct Extraction,Brine,Salar,10523.80286486723,10.0,Very Small (<10kt),Q1 (Low Cost)
+Qarhan II Phase 3,Asia,China,Possible projects,Direct Extraction,Brine,Salar,10760.655542787808,30.0,Small (10-30kt),Q1 (Low Cost)
+West Taijnar I Phase 2,Asia,China,Possible projects,Evaporation,Brine,Salar,11773.61977488844,25.0,Small (10-30kt),Q2
+Alkali Lake Valley,North America,United States,Speculative projects,Evaporation,Brine,Salar,17418.27434010087,0.0,,Q4 (High Cost)
+Arizaro,South America,Argentina,Speculative projects,Direct Extraction,Brine,Salar,14546.70161511014,0.0,,Q3
+Cauchari East,South America,Argentina,Speculative projects,Evaporation,Brine,Salar,14182.53536311891,0.0,,Q3
+Clayton Valley II,North America,United States,Speculative projects,Direct Extraction,Brine,Geothermal,19120.04810794624,10.0,Very Small (<10kt),Q4 (High Cost)
+Fish Lake Valley,North America,United States,Speculative projects,Direct Extraction,Brine,Salar,17164.25427243777,0.0,,Q4 (High Cost)
+Guayatoyoc,South America,Argentina,Speculative projects,Direct Extraction,Brine,Salar,14546.70161511014,0.0,,Q3
+Kachi Phase 2,South America,Argentina,Speculative projects,Direct Extraction,Brine,Salar,14546.70161511014,0.0,,Q3
+Laguna Verde,South America,Argentina,Speculative projects,Evaporation,Brine,Salar,14182.53536311891,0.0,,Q3
+Magnolia,North America,United States,Speculative projects,Direct Extraction,Brine,Oilfield,20297.62172504756,0.0,,Q4 (High Cost)
+North Big Smoky,North America,United States,Speculative projects,Evaporation,Brine,Salar,17418.27434010087,0.0,,Q4 (High Cost)
+Ogden,North America,United States,Speculative projects,Evaporation,Brine,Salar,14784.90483457572,35.0,Medium (30-50kt),Q3
+Perico,South America,Argentina,Speculative projects,Direct Extraction,Brine,Salar,12013.194950979729,10.0,Very Small (<10kt),Q2
+Salar de Coipasa,South America,Bolivia,Speculative projects,Direct Extraction,Brine,Salar,14236.465636155981,25.0,Small (10-30kt),Q3
+Salar de Uyuni II,South America,Bolivia,Speculative projects,Direct Extraction,Brine,Salar,15189.62350580537,14.0,Small (10-30kt),Q4 (High Cost)
+South West Arkansas,North America,United States,Speculative projects,Direct Extraction,Brine,Oilfield,20297.62172504756,0.0,,Q4 (High Cost)
+Tonopah I,North America,United States,Speculative projects,Evaporation,Brine,Salar,17418.27434010087,0.0,,Q4 (High Cost)
+Da Qaidam I Phase 2,Asia,China,Speculative projects,Evaporation,Brine,Salar,10565.65072116382,10.75,Small (10-30kt),Q1 (Low Cost)
+Da Qaidam II,Asia,China,Speculative projects,Evaporation,Brine,Salar,14730.004536057899,0.0,,Q3
+Dazhou,Asia,China,Speculative projects,Direct Extraction,Brine,Salar,15100.84258783597,0.0,,Q3
+Haixiliang,Asia,China,Speculative projects,Direct Extraction,Brine,Salar,15100.84258783597,0.0,,Q3
+Jiezechaka Phase 3,Asia,China,Speculative projects,Direct Extraction,Brine,Salar,15100.84258783597,0.0,,Q3
+West Taijnar II Phase 2,Asia,China,Speculative projects,Direct Extraction,Brine,Salar,11107.0938083798,14.9,Small (10-30kt),Q2
+EuGeLi,Europe,France,Speculative projects,Direct Extraction,Brine,Geothermal,19175.18809970298,10.0,Very Small (<10kt),Q4 (High Cost)
+Lazio,Europe,Italy,Speculative projects,Direct Extraction,Brine,Geothermal,24142.021792378688,0.0,,Q4 (High Cost)
+Yelonggou,Asia,China,Existing operations,"Open pit, Underground",Pegmatite,Spodumene,11663.577751652792,10.0,Very Small (<10kt),Q2
+Grota do Cirilo,South America,Brazil,Existing operations,Open pit,Pegmatite,Spodumene,15382.629246038983,36.7,Medium (30-50kt),Q4 (High Cost)
+Pilgangoora,Oceania,Australia,Existing operations,Open pit,Pegmatite,Spodumene,11385.945716576176,87.45,Large (50-100kt),Q2
+Mt Marion,Oceania,Australia,Existing operations,Open pit,Pegmatite,Spodumene,12022.5,93.5,Large (50-100kt),Q2
+Bikita,Africa,Zimbabwe,Existing operations,Open pit,Pegmatite,"Petalite, Spodumene",17830.77793135788,66.0,Large (50-100kt),Q4 (High Cost)
+Pilgangoora Phase 3,Oceania,Australia,Speculative projects,Open pit,Pegmatite,Spodumene,12110.0,41.15,Medium (30-50kt),Q2
+North American Lithium,North America,Canada,Existing operations,Open pit,Pegmatite,Spodumene,13254.355765210254,22.9805,Small (10-30kt),Q3
+Kathleen Valley,Oceania,Australia,Existing operations,"Open pit, Underground",Pegmatite,Spodumene,11450.0,81.6,Large (50-100kt),Q2
+Mt Cattlin,Oceania,Australia,Existing operations,Open pit,Pegmatite,Spodumene,13609.798271616917,28.69,Small (10-30kt),Q3
+Marble Bar,Oceania,Australia,Speculative projects,Open pit,Pegmatite,Spodumene,10780.92150454077,0.0,,Q1 (Low Cost)
+Manna,Oceania,Australia,Speculative projects,Open pit,Pegmatite,Spodumene,13575.000000000002,0.0,,Q3
+Georgia Lake,North America,Canada,Speculative projects,Open pit,Pegmatite,Spodumene,16281.621332064224,14.72,Small (10-30kt),Q4 (High Cost)
+Authier,North America,Canada,Possible projects,Open pit,Pegmatite,Spodumene,13575.000000000002,16.93,Small (10-30kt),Q3
+Hotan,Asia,China,Existing operations,Open pit,Pegmatite,Spodumene,10940.02599752995,20.0,Small (10-30kt),Q2
+Rose,North America,Canada,Speculative projects,Open pit,Pegmatite,Spodumene,18344.556863706996,8.7,Very Small (<10kt),Q4 (High Cost)
+Moblan,North America,Canada,Speculative projects,Open pit,Pegmatite,Spodumene,16580.0225,18.0,Small (10-30kt),Q4 (High Cost)
+Goulamina,Africa,Mali,Existing operations,Open pit,Pegmatite,Spodumene,14181.541949920238,75.08,Large (50-100kt),Q3
+Manono,Africa,Democratic Republic of the Congo,Possible projects,Open pit,Pegmatite,Spodumene,14260.72894286601,25.0,Small (10-30kt),Q3
+Alvarrões,Europe,Portugal,Existing operations,Open pit,Pegmatite,Lepidolite,20158.28686879276,4.26,Very Small (<10kt),Q4 (High Cost)
+Bougoni,Africa,Mali,Existing operations,Open pit,Pegmatite,Spodumene,17898.38382052076,17.68,Small (10-30kt),Q4 (High Cost)
+Karibib,Africa,Namibia,Existing operations,Open pit,Pegmatite,Lepidolite,28992.44749437233,1.0,Very Small (<10kt),Q4 (High Cost)
+Rapasaari and Syväjärvi,Europe,Finland,Committed projects,"Open pit, Underground",Pegmatite,Spodumene,8152.367599403604,12.6,Small (10-30kt),Q1 (Low Cost)
+Sabi Star,Africa,Zimbabwe,Existing operations,Open pit,Pegmatite,"Petalite, Spodumene",12671.39514777231,27.3,Small (10-30kt),Q3
+Mina da Cachoeira,South America,Brazil,Existing operations,Underground,Pegmatite,Spodumene,8641.89,6.0,Very Small (<10kt),Q1 (Low Cost)
+Finniss,Oceania,Australia,Existing operations,"Open pit, Underground",Pegmatite,Spodumene,10249.98891784375,24.81,Small (10-30kt),Q1 (Low Cost)
+Arcadia,Africa,Zimbabwe,Existing operations,Open pit,Pegmatite,"Petalite, Spodumene",20936.402496725736,51.93,Large (50-100kt),Q4 (High Cost)
+Ewoyaa,Africa,Ghana,Probable projects,Open pit,Pegmatite,Spodumene,17106.5,20.0,Small (10-30kt),Q4 (High Cost)
+Lijiagou,Asia,China,Existing operations,Open pit,Pegmatite,Spodumene,11321.19764393718,0.0,,Q2
+Nemaska,North America,Canada,Possible projects,"Open pit, Underground",Pegmatite,Spodumene,11997.364530166624,31.69,Medium (30-50kt),Q2
+Kamativi,Africa,Zimbabwe,Existing operations,Tailings,Pegmatite,"Petalite, Spodumene",13500.0,43.3,Medium (30-50kt),Q3
+Xiangyuan,Asia,China,Existing operations,Open pit,Pegmatite,Lepidolite,12479.218141940635,25.0,Small (10-30kt),Q2
+Sandawana,Africa,Zimbabwe,Existing operations,Open pit,Pegmatite,Spodumene,16006.15994063906,6.0,Very Small (<10kt),Q4 (High Cost)
+Zulu,Africa,Zimbabwe,Existing operations,Open pit,Pegmatite,Spodumene,16979.237684264386,7.42,Very Small (<10kt),Q4 (High Cost)
+Mibra,South America,Brazil,Existing operations,Open pit,Pegmatite,Spodumene,9760.381510055542,12.24,Small (10-30kt),Q1 (Low Cost)
+Baishuidong,Asia,China,Existing operations,Open pit,Pegmatite,Lepidolite,11663.577751652792,12.0,Small (10-30kt),Q2
+Dahongliutan,Asia,China,Existing operations,Open pit,Pegmatite,Spodumene,11663.577751652792,30.0,Small (10-30kt),Q2
+Jianxiawo,Asia,China,Existing operations,Open pit,Pegmatite,Lepidolite,12515.509460886089,41.7,Medium (30-50kt),Q2
+Jinzifeng,Asia,China,Speculative projects,Open pit,Pegmatite,Lepidolite,13870.089410984296,0.0,,Q3
+Ningdu Heyuan,Asia,China,Existing operations,Open pit,Pegmatite,Spodumene,11663.577751652792,7.23,Very Small (<10kt),Q2
+Tongan,Asia,China,Existing operations,Underground,Pegmatite,Lepidolite,14497.98,3.13,Very Small (<10kt),Q3
+Yichun Xinfang Tanni,Asia,China,Existing operations,Open pit,Pegmatite,Lepidolite,11663.577751652792,10.0,Very Small (<10kt),Q2
+Yifeng Shiziling,Asia,China,Existing operations,Open pit,Pegmatite,Lepidolite,11663.577751652792,10.0,Very Small (<10kt),Q2
+Mibra Phase 2,South America,Brazil,Speculative projects,Open pit,Pegmatite,Spodumene,9859.780813334559,5.44,Very Small (<10kt),Q1 (Low Cost)
+Shuinan,Asia,China,Committed projects,Open pit,Pegmatite,Lepidolite,15163.2,0.0,,Q4 (High Cost)
+Kings Mountain,North America,United States,Possible projects,Open pit,Pegmatite,Spodumene,12707.8207776046,50.0,Medium (30-50kt),Q3
+Mina do Barroso,Europe,Portugal,Possible projects,Open pit,Pegmatite,Spodumene,15758.40389108225,0.0,,Q4 (High Cost)
+San Jose,Europe,Spain,Speculative projects,Open pit,Pegmatite,Zinnwaldite,14915.870138593229,15.0,Small (10-30kt),Q3
+Wolfsberg,Europe,Austria,Speculative projects,Underground,Pegmatite,Spodumene,12957.28156704169,0.0,,Q3
+Zinnwald,Europe,Germany,Speculative projects,Underground,Pegmatite,Zinnwaldite,14420.95968180603,7.26,Very Small (<10kt),Q3
+Wodgina,Oceania,Australia,Existing operations,Open pit,Pegmatite,Spodumene,12475.282900243568,122.0,Very Large (>100kt),Q2
+Mt Holland,Oceania,Australia,Existing operations,Open pit,Pegmatite,Spodumene,9043.07278090496,50.0,Medium (30-50kt),Q1 (Low Cost)
+Bald Hill,Oceania,Australia,Existing operations,Open pit,Pegmatite,Spodumene,11450.0,20.4,Small (10-30kt),Q2
+Bald Hill Phase 2,Oceania,Australia,Possible projects,Open pit,Pegmatite,Spodumene,13113.5,0.0,,Q3
+Greenbushes,Oceania,Australia,Existing operations,Open pit,Pegmatite,Spodumene,8143.506,246.31,Very Large (>100kt),Q1 (Low Cost)
+Georgia Lake,North America,Canada,Speculative projects,"Open pit, Underground",Pegmatite,Spodumene,16281.62133206422,14.72,Small (10-30kt),Q4 (High Cost)
+Polokhivske,Europe,Ukraine,Speculative projects,Open pit,Pegmatite,"Petalite, Spodumene",14190.6549302467,29.68,Small (10-30kt),Q3
+CBL,South America,Brazil,Existing operations,Open pit,Pegmatite,Spodumene,10385.876837685471,0.0,,Q1 (Low Cost)
+Gyabjeka Spodumene Deposit,Asia,China,Existing operations,Open pit,Pegmatite,Spodumene,11902.37244589717,0.0,,Q2
+Yichun 414 Tanni,Asia,China,Existing operations,Open-pit,Pegmatite,Lepidolite,12601.92288849633,50.0,Medium (30-50kt),Q2
+Ngungaju,Oceania,Australia,Existing operations,Open pit,Pegmatite,Spodumene,10780.92150454077,0.0,,Q1 (Low Cost)
+Val-d’Or,North America,Canada,Existing operations,Open pit,Pegmatite,Spodumene,11760.67102185065,30.0,Small (10-30kt),Q2
+Dagang,Asia,China,Existing operations,Open pit,Pegmatite,Lepidolite,12182.57809975299,40.0,Medium (30-50kt),Q2
+Huashan,Asia,China,Existing operations,Open pit,Pegmatite,Lepidolite,13025.78395119677,60.0,Large (50-100kt),Q3
+Barkam,Asia,China,Existing operations,Open pit,Pegmatite,Spodumene,11902.37244589717,0.0,,Q2
+Jiajika,Asia,China,Existing operations,Open pit,Pegmatite,Spodumene,10940.07828335946,29.58,Small (10-30kt),Q2
+Blesberg,Africa,South Africa,Existing operations,Tailings,Pegmatite,Spodumene,16179.75232837052,3.0,Very Small (<10kt),Q4 (High Cost)
+Tanco,North America,Canada,Existing operations,Underground,Pegmatite,Spodumene,12703.891077335991,3.6,Very Small (<10kt),Q3
+Grota do Cirilo Phase 2,South America,Brazil,Committed projects,Open pit,Pegmatite,Spodumene,9877.895640948784,35.0,Medium (30-50kt),Q1 (Low Cost)
+Neves,South America,Brazil,Committed projects,Open pit,Pegmatite,Spodumene,8988.073588105086,44.4,Medium (30-50kt),Q1 (Low Cost)
+Tongan Dangtian,Asia,China,Committed projects,Underground,Pegmatite,Lepidolite,12154.15461942215,10.0,Very Small (<10kt),Q2
+Xiangyuan Phase 2,Asia,China,Speculative projects,Open pit,Pegmatite,Lepidolite,11705.53773226699,25.0,Small (10-30kt),Q2
+Greenbushes Phase 4,Oceania,Australia,Committed projects,Open pit,Pegmatite,Spodumene,8662.5,77.2,Large (50-100kt),Q1 (Low Cost)
+Sandawana Phase 2,Africa,Zimbabwe,Probable projects,Open pit,Pegmatite,Spodumene,14336.27441920797,54.0,Large (50-100kt),Q3
+Uis I Phase 2,Africa,Namibia,Possible projects,Open pit,Pegmatite,Spodumene,14726.30452883667,14.5,Small (10-30kt),Q3
+Galaxy,North America,Canada,Possible projects,Open pit,Pegmatite,Spodumene,12611.65493218418,20.0,Small (10-30kt),Q2
+Grota do Cirilo Phase 3,South America,Brazil,Possible projects,Open pit,Pegmatite,Spodumene,9877.895640948784,35.0,Medium (30-50kt),Q1 (Low Cost)
+Salinas,South America,Brazil,Speculative projects,Open pit,Pegmatite,Spodumene,9386.127848093187,55.0,Large (50-100kt),Q1 (Low Cost)
+Barkam Phase 2,Asia,China,Probable projects,Underground,Pegmatite,Spodumene,9446.657885056546,32.89,Medium (30-50kt),Q1 (Low Cost)
+Dechenongba,Asia,China,Probable projects,Open pit,Pegmatite,Spodumene,8084.007333085957,44.51,Medium (30-50kt),Q1 (Low Cost)
+Murong,Asia,China,Probable projects,Open pit,Pegmatite,Spodumene,9255.733462425038,7.0,Very Small (<10kt),Q1 (Low Cost)
+Greenbushes Phase 5,Oceania,Australia,Probable projects,Open pit,Pegmatite,Spodumene,8662.5,77.16,Large (50-100kt),Q1 (Low Cost)
+Kathleen Valley Phase 2,Oceania,Australia,Speculative projects,Underground,Pegmatite,Spodumene,10780.92150454077,0.0,,Q1 (Low Cost)
+Pilgangoora Phase 4,Oceania,Australia,Probable projects,Open pit,Pegmatite,Spodumene,8735.12556599949,80.0,Large (50-100kt),Q1 (Low Cost)
+Wodgina Phase 3,Oceania,Australia,Possible projects,Open pit,Pegmatite,Spodumene,10780.92150454077,0.0,,Q1 (Low Cost)
+Bougoni Phase 2,Africa,Mali,Possible projects,Open pit,Pegmatite,Spodumene,14479.269966452539,19.0,Small (10-30kt),Q3
+Ewoyaa Phase 2,Africa,Ghana,Speculative projects,Open pit,Pegmatite,Spodumene,13518.25211092579,35.3,Medium (30-50kt),Q3
+Goulamina Phase 2,Africa,Mali,Possible projects,Open pit,Pegmatite,Spodumene,13300.27112359867,40.0,Medium (30-50kt),Q3
+Bandeira,South America,Brazil,Possible projects,Underground,Pegmatite,Spodumene,10080.471073124168,24.2,Small (10-30kt),Q1 (Low Cost)
+Carolina,North America,United States,Possible projects,Open pit,Pegmatite,Spodumene,14167.994751781469,10.0,Very Small (<10kt),Q3
+Lijiagou Phase 2,Asia,China,Possible projects,Open pit,Pegmatite,Spodumene,9691.321030907442,22.5,Small (10-30kt),Q1 (Low Cost)
+Songshugang,Asia,China,Possible projects,Open pit,Pegmatite,Lepidolite,12092.81130050282,10.0,Very Small (<10kt),Q2
+Xikeng,Asia,China,Possible projects,Open pit,Pegmatite,Lepidolite,14772.50025875837,0.0,,Q3
+Yajiang Cuola,Asia,China,Possible projects,"Open pit, Underground",Pegmatite,Spodumene,7713.441299365129,13.0,Small (10-30kt),Q1 (Low Cost)
+Mt Holland Phase 2,Oceania,Australia,Speculative projects,Open pit,Pegmatite,Spodumene,8125.008315762083,50.0,Medium (30-50kt),Q1 (Low Cost)
+Karibib Phase 2,Africa,Namibia,Speculative projects,Open pit,Pegmatite,Lepidolite,16517.03913553452,5.52,Very Small (<10kt),Q4 (High Cost)
+Kenticha,Africa,Ethiopia,Speculative projects,Open pit,Pegmatite,Spodumene,16054.376667805582,0.0,,Q4 (High Cost)
+Uis II,Africa,Namibia,Speculative projects,Open pit,Pegmatite,"Lepidolite, Spodumene",19134.83115282023,0.0,,Q4 (High Cost)
+PAK & Spark,North America,Canada,Speculative projects,Open pit,Pegmatite,Spodumene,12611.65493218418,20.0,Small (10-30kt),Q2
+Raleigh Lake,North America,Canada,Speculative projects,Open pit,Pegmatite,Spodumene,12349.588368041459,0.0,,Q2
+Separation Rapids,North America,Canada,Speculative projects,Open pit,Pegmatite,"Lepidolite, Petalite",13329.89526749041,12.85,Small (10-30kt),Q3
+Aketasi,Asia,China,Speculative projects,Open pit,Pegmatite,Spodumene,9109.419451255992,10.0,Very Small (<10kt),Q1 (Low Cost)
+Daqianggou,Asia,China,Speculative projects,Open pit,Pegmatite,Spodumene,11769.152453269211,0.0,,Q2
+Jiajika Phase 2,Asia,China,Speculative projects,Open pit,Pegmatite,Spodumene,9725.31421596749,17.0,Small (10-30kt),Q1 (Low Cost)
+Jiajika X03,Asia,China,Speculative projects,Open pit,Pegmatite,Spodumene,11769.152453269211,0.0,,Q2
+Jianxiawo Phase 2,Asia,China,Speculative projects,Open pit,Pegmatite,Lepidolite,14772.50025875837,0.0,,Q3
+Shaotangou,Asia,China,Speculative projects,Open pit,Pegmatite,Spodumene,11769.152453269211,0.0,,Q2
+Tongan Diyi,Asia,China,Speculative projects,Underground,Pegmatite,Lepidolite,14621.43015470729,0.0,,Q3
+Tongan Ejing,Asia,China,Speculative projects,Underground,Pegmatite,Lepidolite,14621.43015470729,0.0,,Q3
+Yeweiling,Asia,China,Speculative projects,Open pit,Pegmatite,Lepidolite,14772.50025875837,0.0,,Q3
+Yichun Greenfield,Asia,China,Speculative projects,Open pit,Pegmatite,Lepidolite,14772.50025875837,0.0,,Q3
+Avalonia,Europe,Ireland,Speculative projects,Open pit,Pegmatite,Spodumene,15758.40389108225,0.0,,Q4 (High Cost)
+Beauvoir,Europe,France,Speculative projects,Open pit,Pegmatite,Zinnwaldite,13737.78945172474,29.93,Small (10-30kt),Q3
+Cinovec,Europe,Czech Republic,Speculative projects,Underground,Pegmatite,"Lepidolite, Zinnwaldite",18871.087395672588,0.0,,Q4 (High Cost)
+St Austell,Europe,United Kingdom,Speculative projects,Open pit,Pegmatite,Zinnwaldite,14807.8279689159,20.0,Small (10-30kt),Q3
+Trelavour,Europe,United Kingdom,Speculative projects,Open pit,Pegmatite,Lepidolite,17234.533685617218,6.87,Very Small (<10kt),Q4 (High Cost)
+Barrow Creek,Oceania,Australia,Speculative projects,Open pit,Pegmatite,Spodumene,10780.92150454077,0.0,,Q1 (Low Cost)
+Mallina,Oceania,Australia,Speculative projects,Open pit,Pegmatite,Spodumene,10780.92150454077,0.0,,Q1 (Low Cost)
+Mt Bevan,Oceania,Australia,Speculative projects,Open pit,Pegmatite,Spodumene,10780.92150454077,0.0,,Q1 (Low Cost)
+Mt Edon,Oceania,Australia,Speculative projects,Open pit,Pegmatite,Spodumene,10780.92150454077,0.0,,Q1 (Low Cost)
+Mt Ida,Oceania,Australia,Speculative projects,Open pit,Pegmatite,Spodumene,10780.92150454077,0.0,,Q1 (Low Cost)
+Thacker Pass,North America,United States,Committed projects,Open pit,Sedimentary,Clay,14955.577510620938,40.0,Medium (30-50kt),Q3
+Sonora,South America,Mexico,Speculative projects,Open pit,Sedimentary,Clay,19669.56800794211,0.0,,Q4 (High Cost)
+Boron,North America,United States,Existing operations,Tailings,Sedimentary,Clay,25000.0,1.5,Very Small (<10kt),Q4 (High Cost)
+Falchani,South America,Peru,Speculative projects,Open pit,Sedimentary,Clay,15830.65128830804,23.15,Small (10-30kt),Q4 (High Cost)
+Rhyolite Ridge,North America,United States,Probable projects,Open pit,Sedimentary,Clay,15728.07355502618,20.6,Small (10-30kt),Q4 (High Cost)
+Jadar ,Europe,Serbia,Probable projects,Underground,Sedimentary,Jadarite,15167.90906663352,20.0,Small (10-30kt),Q4 (High Cost)
+Clayton Valley I,North America,United States,Possible projects,Open pit,Sedimentary,Clay,16815.71237883658,7.0,Very Small (<10kt),Q4 (High Cost)
+Big Sandy,North America,United States,Speculative projects,Open pit,Sedimentary,Clay,19669.56800794211,0.0,,Q4 (High Cost)
+Clayton North,North America,United States,Speculative projects,Open pit,Sedimentary,Clay,19669.56800794211,0.0,,Q4 (High Cost)
+McDermitt,North America,United States,Speculative projects,Open pit,Sedimentary,Clay,19669.56800794211,0.0,,Q4 (High Cost)
+Teels Marsh Valley,North America,United States,Speculative projects,Open pit,Sedimentary,Salar,13243.63911943088,0.0,,Q3
+Thacker Pass Phase 2,North America,United States,Speculative projects,Open pit,Sedimentary,Clay,16674.31344115668,10.0,Very Small (<10kt),Q4 (High Cost)
+Tonopah Flats,North America,United States,Speculative projects,Open pit,Sedimentary,Clay,19669.56800794211,0.0,,Q4 (High Cost)
+Tonopah II,North America,United States,Speculative projects,Open pit,Sedimentary,Clay,19669.56800794211,0.0,,Q4 (High Cost)
+Zeus,North America,United States,Speculative projects,Open pit,Sedimentary,Clay,19669.56800794211,0.0,,Q4 (High Cost)

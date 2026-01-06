@@ -1,0 +1,192 @@
+# 파레토 최적화 기본 설정
+version: "1.0"
+
+# 가중치 스캔 전략
+weight_sweep:
+  strategy: "uniform"  # uniform / dense_edges / logarithmic / custom
+
+  # uniform: 균등 간격 (0.0, 0.25, 0.5, 0.75, 1.0)
+  uniform:
+    points: 5
+    carbon_range: [0.0, 1.0]
+    cost_range: [0.0, 1.0]
+
+  # dense_edges: 양 극단에 더 많은 포인트
+  dense_edges:
+    points: 9
+    edge_density: 0.7  # 70% 포인트를 양 끝 30% 구간에 배치
+
+  # logarithmic: 로그 스케일
+  logarithmic:
+    points: 7
+    base: 10
+
+  # custom: 사용자 지정
+  custom:
+    combinations:
+      - {carbon_weight: 0.95, cost_weight: 0.05}
+      - {carbon_weight: 0.9, cost_weight: 0.1}
+      - {carbon_weight: 0.7, cost_weight: 0.3}
+      - {carbon_weight: 0.5, cost_weight: 0.5}
+      - {carbon_weight: 0.3, cost_weight: 0.7}
+      - {carbon_weight: 0.1, cost_weight: 0.9}
+      - {carbon_weight: 0.05, cost_weight: 0.95}
+
+# 제약조건 프리셋
+constraint_presets:
+  narrow:  # 기존 범위
+    Ni: {recycle: [0.05, 0.10], low_carbon: [0.0, 0.05]}
+    Co: {recycle: [0.025, 0.05], low_carbon: [0.0, 0.05]}
+    Li: {recycle: [0.018, 0.036], low_carbon: [0.0, 0.20]}
+
+  medium:  # 확장 범위
+    Ni: {recycle: [0.0, 0.30], low_carbon: [0.0, 0.15]}
+    Co: {recycle: [0.0, 0.25], low_carbon: [0.0, 0.15]}
+    Li: {recycle: [0.0, 0.25], low_carbon: [0.0, 0.30]}
+
+  wide:  # 최대 탐색
+    Ni: {recycle: [0.0, 0.60], low_carbon: [0.0, 0.30]}
+    Co: {recycle: [0.0, 0.50], low_carbon: [0.0, 0.30]}
+    Li: {recycle: [0.0, 0.40], low_carbon: [0.0, 0.40]}
+
+# 시나리오 템플릿
+scenario_templates:
+  re100_focused:
+    description: "RE100 비율 극대화"
+    tier1_re_range: [0.5, 1.0]
+    tier2_re_range: [0.5, 1.0]
+    constraint_preset: "medium"
+
+  recycling_focused:
+    description: "재활용재 극대화"
+    element_constraints:
+      Ni: {recycle: [0.20, 0.60], low_carbon: [0.0, 0.10]}
+      Co: {recycle: [0.15, 0.50], low_carbon: [0.0, 0.10]}
+      Li: {recycle: [0.10, 0.40], low_carbon: [0.0, 0.15]}
+    tier1_re_range: [0.0, 0.5]
+    tier2_re_range: [0.0, 0.5]
+
+  low_carbon_focused:
+    description: "저탄소메탈 극대화"
+    element_constraints:
+      Ni: {recycle: [0.0, 0.20], low_carbon: [0.10, 0.30]}
+      Co: {recycle: [0.0, 0.15], low_carbon: [0.10, 0.30]}
+      Li: {recycle: [0.0, 0.15], low_carbon: [0.15, 0.40]}
+    tier1_re_range: [0.0, 0.5]
+    tier2_re_range: [0.0, 0.5]
+
+  balanced:
+    description: "균형 탐색"
+    constraint_preset: "medium"
+    tier1_re_range: [0.0, 1.0]
+    tier2_re_range: [0.0, 1.0]
+
+# Epsilon-Constraint 설정
+epsilon_constraint:
+  strategy: "linear_sweep"  # linear_sweep / exponential_sweep / adaptive
+
+  # linear_sweep: ε를 균등하게 증가
+  linear_sweep:
+    cost_base: "baseline"  # baseline / fixed_value
+    cost_max_multiplier: 1.5  # baseline_cost × 1.5까지 탐색
+    points: 10  # ε 스캔 포인트 수
+
+  # exponential_sweep: 초기에는 좁게, 후반에는 넓게
+  exponential_sweep:
+    cost_base: "baseline"
+    cost_max_multiplier: 2.0
+    points: 8
+    growth_rate: 1.2  # 지수 증가율
+
+  # adaptive: 실현가능성에 따라 동적 조정
+  adaptive:
+    cost_base: "baseline"
+    initial_step: 0.05  # 초기 증가 비율 5%
+    max_attempts: 20  # 최대 시도 횟수
+    infeasible_skip: true  # 실현불가능한 ε 스킵
+
+  # 실현가능성 검증
+  feasibility_check:
+    enabled: true
+    timeout: 60  # 각 ε당 최대 60초
+
+  # 결과 필터링
+  filtering:
+    remove_dominated: true  # 지배당한 해 제거
+    uniqueness_threshold: 0.001  # 중복 해 판정 임계값
+
+# NSGA-II 설정
+nsga2:
+  # 유전 알고리즘 파라미터
+  population_size: 50  # 개체 수
+  generations: 100  # 세대 수
+
+  # 연산자 확률
+  crossover_prob: 0.9  # 교차 확률
+  mutation_prob: 0.1  # 돌연변이 확률
+
+  # 선택 전략
+  selection:
+    method: "tournament"  # tournament / roulette
+    tournament_size: 3
+
+  # 교차 전략
+  crossover:
+    method: "sbx"  # sbx (Simulated Binary Crossover) / uniform
+    eta: 20  # SBX distribution index
+
+  # 돌연변이 전략
+  mutation:
+    method: "polynomial"  # polynomial / uniform / gaussian
+    eta: 20  # Polynomial mutation distribution index
+
+  # 제약조건 처리
+  constraint_handling:
+    method: "penalty"  # penalty / repair / feasibility_rule
+    penalty_factor: 1000  # 제약 위반 페널티
+
+  # 수렴 조건
+  termination:
+    max_generations: 100
+    early_stopping: true
+    patience: 20  # 개선 없으면 조기 종료
+    convergence_threshold: 0.001
+
+  # 초기화
+  initialization:
+    method: "random"  # random / lhs (Latin Hypercube) / seeded
+    seed_solutions: []  # 기존 좋은 해를 시드로 사용
+
+  # 병렬 실행 (optional)
+  parallel:
+    enabled: false
+    num_workers: 4
+
+  # 결과
+  output:
+    save_all_generations: false
+    save_pareto_history: true
+
+# 최적화 실행 옵션
+optimization:
+  solver: "auto"
+  time_limit: 300
+  gap_tolerance: 0.01
+  verbose: false
+
+  # 병렬 실행 (향후 확장)
+  parallel:
+    enabled: false
+    max_workers: 4
+
+# 결과 저장 옵션
+results:
+  output_dir: "log/pareto_results"
+  format: ["json", "csv"]
+  save_individual_results: true
+  save_pareto_summary: true
+
+  # 시각화 자동 생성
+  auto_visualize:
+    enabled: true
+    plot_types: ["pareto_frontier", "heatmap", "radar"]

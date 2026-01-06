@@ -1,0 +1,8 @@
+,Total_Cash_Cost,Total_Cash_Cost,Total_Cash_Cost,Total_Cash_Cost,Total_Cash_Cost,Total_Cash_Cost,Capacity,Capacity,Capacity
+,mean,median,min,max,std,count,sum,mean,count
+Status(as of 2025.1Q),,,,,,,,,
+Committed projects,11120.55,11633.42,7000.0,15163.2,2429.9,14,345.2,24.66,14
+Existing operations,12693.94,11663.58,5849.61,28992.45,4360.99,74,2273.65,30.73,74
+Possible projects,12701.64,12910.66,7713.44,16815.71,1996.96,32,568.95,17.78,32
+Probable projects,11907.74,11642.97,8084.01,17106.5,2779.4,16,562.96,35.18,16
+Speculative projects,14779.67,14621.43,8125.01,24142.02,3357.69,91,855.81,9.4,91

@@ -1,0 +1,39 @@
+[server]
+# 파일 변경 감지 설정 - polling 방식 사용 (임시 파일 이슈 방지)
+fileWatcherType = "poll"
+
+# 사용 통계 수집 비활성화
+headless = true
+
+[runner]
+# 매직 명령어 사용 설정
+magicEnabled = true
+
+# 파일 감시 설정 - 임시 파일 무시
+fastReruns = true
+
+[logger]
+# 로그 레벨 설정 - error만 표시
+level = "error"
+
+[browser]
+# 사용 통계 수집 비활성화
+gatherUsageStats = false
+
+[global]
+# 개발 모드 설정
+developmentMode = false
+
+# [theme]
+# 테마 설정을 주석 처리하여 시스템/브라우저 기본 테마 사용
+# 라이트 모드를 원하면 아래 설정 사용:
+# primaryColor = "#2196F3"
+# backgroundColor = "#FFFFFF"
+# secondaryBackgroundColor = "#F0F2F6"
+# textColor = "#262730"
+
+# 또는 다크 모드를 원하면:
+# primaryColor = "#2196F3"
+# backgroundColor = "#0e1117"
+# secondaryBackgroundColor = "#262730"
+# textColor = "#fafafa"

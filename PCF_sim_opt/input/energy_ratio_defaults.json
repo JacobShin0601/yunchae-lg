@@ -1,0 +1,89 @@
+{
+  "version": "1.0",
+  "description": "Energy ratio defaults for materials without data",
+  "last_updated": "2025-12-03",
+  "category_defaults": {
+    "cathode": {
+      "tier1_ratio": 0.12,
+      "tier2_ratio": 0.06,
+      "description": "양극재 평균 (CAM 제조 에너지 집약적)",
+      "notes": "Based on CathodeHelper baseline extraction"
+    },
+    "anode": {
+      "tier1_ratio": 0.10,
+      "tier2_ratio": 0.05,
+      "description": "음극재 평균 (흑연화 공정)",
+      "notes": "Lower than cathode due to less complex processing"
+    },
+    "electrolyte": {
+      "tier1_ratio": 0.08,
+      "tier2_ratio": 0.04,
+      "description": "전해액 평균 (화학 합성)",
+      "notes": "Chemical synthesis energy requirements"
+    },
+    "separator": {
+      "tier1_ratio": 0.06,
+      "tier2_ratio": 0.03,
+      "description": "분리막 평균 (코팅/압출)",
+      "notes": "Coating and extrusion process"
+    },
+    "general": {
+      "tier1_ratio": 0.05,
+      "tier2_ratio": 0.03,
+      "description": "일반 자재 기본값",
+      "notes": "Conservative default for unclassified materials"
+    }
+  },
+  "material_specific": {
+    "Natural Graphite": {
+      "tier1_ratio": 0.09,
+      "tier2_ratio": 0.04,
+      "source": "Industry average for natural graphite",
+      "notes": "Lower than artificial (less processing)"
+    },
+    "Artificial Graphite": {
+      "tier1_ratio": 0.11,
+      "tier2_ratio": 0.06,
+      "source": "Industry average for graphitization",
+      "notes": "Higher due to 2800°C graphitization"
+    },
+    "SI Series": {
+      "tier1_ratio": 0.10,
+      "tier2_ratio": 0.05,
+      "source": "Estimated for silicon processing",
+      "notes": "Silicon anode processing"
+    },
+    "Current Collector": {
+      "tier1_ratio": 0.08,
+      "tier2_ratio": 0.04,
+      "source": "Metal foil production estimates",
+      "notes": "Copper/aluminum foil rolling and coating"
+    },
+    "Binder": {
+      "tier1_ratio": 0.07,
+      "tier2_ratio": 0.03,
+      "source": "Polymer synthesis estimates",
+      "notes": "PVDF and other polymer binders"
+    },
+    "Additive": {
+      "tier1_ratio": 0.06,
+      "tier2_ratio": 0.03,
+      "source": "Chemical processing estimates",
+      "notes": "Various additives for performance enhancement"
+    }
+  },
+  "validation_rules": {
+    "max_tier1_ratio": 0.50,
+    "max_tier2_ratio": 0.30,
+    "max_total_ratio": 0.60,
+    "warning_threshold": 0.40,
+    "notes": "Energy ratios above these thresholds will trigger warnings"
+  },
+  "data_sources": {
+    "cathode": "Extracted from CathodeHelper baseline simulation",
+    "anode": "Industry benchmarks for graphite processing",
+    "electrolyte": "Chemical synthesis energy intensity data",
+    "separator": "Coating and extrusion process estimates",
+    "general": "Conservative estimates for safety"
+  }
+}

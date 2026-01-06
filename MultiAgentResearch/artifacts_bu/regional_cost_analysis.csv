@@ -1,0 +1,9 @@
+,Total_Cash_Cost,Total_Cash_Cost,Total_Cash_Cost,Total_Cash_Cost,Total_Cash_Cost,Total_Cash_Cost,Capacity,Capacity,Capacity
+,mean,median,min,max,std,count,sum,mean,count
+Region,,,,,,,,,
+Africa,16430.5,16030.27,12671.4,28992.45,3645.8,20,512.03,25.6,20
+Asia,12090.39,11663.58,5849.61,23650.0,3117.03,67,949.58,14.17,67
+Europe,15925.17,15261.0,8152.37,24142.02,3548.66,16,190.8,11.92,16
+North America,16150.51,16281.62,9451.23,25000.0,3372.81,43,477.14,11.1,43
+Oceania,10793.68,10780.92,8125.01,13609.8,1570.02,25,1080.27,43.21,25
+South America,12128.27,12245.75,6518.12,19669.57,2852.11,56,1396.75,24.94,56

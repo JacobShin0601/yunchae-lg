@@ -1,0 +1,169 @@
+{
+  "tier_data": [
+    {
+      "tier": "Tier1",
+      "material": "양극재",
+      "power_unit": 7.92,
+      "country": "한국",
+      "re_certification": "녹색프리미엄",
+      "cert_price": 0.007,
+      "expected_cost": 0.06,
+      "note": ""
+    },
+    {
+      "tier": "Tier1",
+      "material": "양극재",
+      "power_unit": 7.92,
+      "country": "중국",
+      "re_certification": "GEC",
+      "cert_price": 0.002,
+      "expected_cost": 0.02,
+      "note": ""
+    },
+    {
+      "tier": "Tier1",
+      "material": "양극재",
+      "power_unit": 7.92,
+      "country": "일본",
+      "re_certification": "FIT NFC",
+      "cert_price": 0.010,
+      "expected_cost": 0.08,
+      "note": ""
+    },
+    {
+      "tier": "Tier1",
+      "material": "양극재",
+      "power_unit": 7.92,
+      "country": "헝가리",
+      "re_certification": "G.O",
+      "cert_price": 0.001,
+      "expected_cost": 0.01,
+      "note": ""
+    },
+    {
+      "tier": "Tier1",
+      "material": "음극재(천연)",
+      "power_unit": 2.58,
+      "country": "중국",
+      "re_certification": "GEC",
+      "cert_price": 0.002,
+      "expected_cost": 0.01,
+      "note": ""
+    },
+    {
+      "tier": "Tier1",
+      "material": "음극재(천연)",
+      "power_unit": 2.58,
+      "country": "인니",
+      "re_certification": "I-REC",
+      "cert_price": 0.002,
+      "expected_cost": 0.01,
+      "note": ""
+    },
+    {
+      "tier": "Tier1",
+      "material": "음극재(인조)",
+      "power_unit": 3.19,
+      "country": "중국",
+      "re_certification": "GEC",
+      "cert_price": 0.002,
+      "expected_cost": 0.01,
+      "note": ""
+    },
+    {
+      "tier": "Tier1",
+      "material": "음극재(인조)",
+      "power_unit": 3.19,
+      "country": "인니",
+      "re_certification": "I-REC",
+      "cert_price": 0.002,
+      "expected_cost": 0.01,
+      "note": ""
+    },
+    {
+      "tier": "Tier1",
+      "material": "음극재(SiO)",
+      "power_unit": 31.55,
+      "country": "한국",
+      "re_certification": "녹색프리미엄",
+      "cert_price": 0.007,
+      "expected_cost": 0.24,
+      "note": "전력원단위: 대주전자자료(한국) 기준"
+    },
+    {
+      "tier": "Tier1",
+      "material": "음극재(SiO)",
+      "power_unit": 8.69,
+      "country": "중국",
+      "re_certification": "GEC",
+      "cert_price": 0.002,
+      "expected_cost": 0.02,
+      "note": ""
+    },
+    {
+      "tier": "Tier1",
+      "material": "동박",
+      "power_unit": 14.61,
+      "country": "중국",
+      "re_certification": "GEC",
+      "cert_price": 0.002,
+      "expected_cost": 0.03,
+      "note": ""
+    },
+    {
+      "tier": "Tier1",
+      "material": "동박",
+      "power_unit": 19.6,
+      "country": "헝가리",
+      "re_certification": "G.O",
+      "cert_price": 0.001,
+      "expected_cost": 0.02,
+      "note": "전력원단위: 솔루스(헝가리) 기준"
+    },
+    {
+      "tier": "Tier1",
+      "material": "분리막_코팅",
+      "power_unit": 0.13,
+      "country": "중국",
+      "re_certification": "GEC",
+      "cert_price": 0.002,
+      "expected_cost": 0.0003,
+      "note": "전력원단위: SRS 기준 M-SRS기준 전력단위 별도 조사 필요"
+    },
+    {
+      "tier": "Tier2",
+      "material": "양극재_전구체",
+      "power_unit": 0.66,
+      "country": "중국",
+      "re_certification": "GEC",
+      "cert_price": 0.002,
+      "expected_cost": 0.0015,
+      "note": ""
+    },
+    {
+      "tier": "Tier2",
+      "material": "음극재(인조)_흑연화",
+      "power_unit": 10.71,
+      "country": "중국",
+      "re_certification": "GEC",
+      "cert_price": 0.002,
+      "expected_cost": 0.02,
+      "note": ""
+    },
+    {
+      "tier": "Tier2",
+      "material": "분리막_원단",
+      "power_unit": 0.16,
+      "country": "중국",
+      "re_certification": "GEC",
+      "cert_price": 0.002,
+      "expected_cost": 0.0004,
+      "note": "전력원단위: SRS 기준 M-SRS기준 전력단위 별도 조사 필요"
+    }
+  ],
+  "unit_info": {
+    "power_unit_description": "전력원단위 (양음동: kWh/kg, 분리막: kWh/m3)",
+    "cert_price_unit": "$/kWh",
+    "expected_cost_unit": "$/kg, $/m2"
+  }
+}

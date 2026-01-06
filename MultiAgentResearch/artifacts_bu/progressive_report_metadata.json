@@ -1,0 +1,34 @@
+{
+  "title": "리튬 개발 프로젝트들의 지역별 한계원가 분석 및 시장 동향 평가",
+  "format": "html",
+  "sections": [
+    "개요",
+    "주요 발견사항",
+    "지역별 한계원가 분석",
+    "프로젝트 특성 분석",
+    "가설 검증 결과",
+    "저비용 및 고비용 프로젝트 분석",
+    "결론 및 시사점",
+    "참고문헌"
+  ],
+  "created_date": "2025년 08월 07일",
+  "file_path": "./artifacts/progressive_report.html",
+  "completed_sections": [
+    "개요",
+    "주요 발견사항",
+    "지역별 한계원가 분석",
+    "프로젝트 특성 분석",
+    "가설 검증 결과",
+    "저비용 및 고비용 프로젝트 분석",
+    "결론 및 시사점",
+    "참고문헌"
+  ],
+  "used_assets": [],
+  "finalized": true,
+  "finalized_date": "2025년 08월 07일 11:08:46",
+  "final_files": [
+    "./artifacts/progressive_report.html",
+    "./report.html",
+    "./final_report.pdf"
+  ]
+}

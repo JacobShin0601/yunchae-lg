@@ -1,0 +1,317 @@
+################################################################################
+# PCF 최적화 설정 파일 (config_opt.yaml)
+################################################################################
+
+# 메타데이터
+metadata:
+  name: PCF 최적화 설정
+  description: 배터리 소재 탄소발자국 최소화를 위한 최적화 모델 설정
+  version: 1.0
+  created: 2025-08-14
+  author: 지속가능 협력팀
+
+# 목적함수 설정
+objective: minimize_carbon  # minimize_carbon, minimize_cost, maximize_ease, multi_objective
+
+# 목적함수 옵션
+objective_options:
+  available_types:
+    - minimize_carbon  # 탄소발자국 최소화
+    - minimize_cost    # 총 비용 최소화
+    - maximize_ease    # 구현 용이성 최대화 (활성화 활동 수 최소화)
+    - multi_objective  # 다목적 최적화
+  
+  descriptions:
+    minimize_carbon: 탄소발자국 최소화
+    minimize_cost: 총 비용 최소화
+    maximize_ease: 구현 용이성 최대화 (활성화 활동 수 최소화)
+    multi_objective: 다목적 최적화
+  
+  # 다목적 최적화 가중치
+  multi_objective_weights:
+    carbon: 0.7  # 탄소발자국 가중치
+    cost: 0.3    # 비용 가중치
+
+# 의사결정 변수 설정
+decision_vars:
+  # 생산지 설정
+  location: 한국
+  location_options:
+    - 한국
+    - 중국
+    - 일본
+    - 폴란드
+    - 미국
+    - 유럽
+  
+  # 이진 변수 사용 여부 (CBC 솔버용)
+  use_binary_variables: false
+  
+  # Tier별 감축비율 설정
+  reduction_rates:
+    tier1_양극재:
+      min: 0
+      max: 100
+      default: 20
+      description: Tier1 양극재 감축비율 (%)
+    
+    tier1_분리막:
+      min: 0
+      max: 100
+      default: 15
+      description: Tier1 분리막 감축비율 (%)
+    
+    tier1_전해액:
+      min: 0
+      max: 100
+      default: 25
+      description: Tier1 전해액 감축비율 (%)
+    
+    tier2_양극재:
+      min: 0
+      max: 100
+      default: 30
+      description: Tier2 양극재 감축비율 (%)
+    
+    tier2_저탄소원료:
+      min: 0
+      max: 100
+      default: 35
+      description: Tier2 저탄소원료 감축비율 (%)
+    
+    tier2_전구체:
+      min: 0
+      max: 100
+      default: 20
+      description: Tier2 전구체 감축비율 (%)
+    
+    tier3_니켈원료:
+      min: 0
+      max: 100
+      default: 40
+      description: Tier3 니켈원료 감축비율 (%)
+    
+    tier3_코발트:
+      min: 0
+      max: 100
+      default: 35
+      description: Tier3 코발트 감축비율 (%)
+  
+  # 양극재 구성 설정
+  cathode:
+    type: B  # A: 원료구성 변수, B: 비율 변수
+    
+    type_options:
+      - A  # Type A: 원료구성이 변수, 비율이 고정된 비선형 문제
+      - B  # Type B: 비율이 변수, 원료구성이 고정된 선형 문제
+    
+    type_descriptions:
+      A: 원료구성이 변수, 비율이 고정된 비선형 문제
+      B: 비율이 변수, 원료구성이 고정된 선형 문제
+    
+    type_A_config:
+      recycle_ratio_fixed: 0.2      # 고정된 재활용재 비율 (20%)
+      low_carbon_ratio_fixed: 0.1   # 고정된 저탄소원료 비율 (10%)
+      new_material_ratio_fixed: 0.7 # 고정된 신재 비율 (70%)
+      emission_range: [5.0, 15.0]   # 저탄소원료 배출계수 범위
+      description: Type A - 재활용재/저탄소원료 비율 고정, 배출계수 최적화
+    
+    type_B_config:
+      emission_fixed: 10.0           # 고정된 저탄소원료 배출계수
+      recycle_range: [0.1, 0.5]      # 재활용재 비율 범위 (10-50%)
+      low_carbon_range: [0.05, 0.3]  # 저탄소원료 비율 범위 (5-30%)
+      description: Type B - 배출계수 고정, 재활용재/저탄소원료 비율 최적화
+
+# 제약조건 설정
+constraints:
+  target_carbon: 50.0              # 목표 탄소발자국 (kg CO2eq/kWh)
+  target_carbon_description: 목표 탄소발자국 (kg CO2eq/kWh)
+  
+  max_activities: 5                # 최대 활성화 가능한 감축활동 수 (CBC 솔버용)
+  max_activities_description: 최대 활성화 가능한 감축활동 수 (CBC 솔버용)
+  
+  max_cost: 100000                 # 최대 허용 비용 (원)
+  max_cost_description: 최대 허용 비용 (원)
+  
+  ni_max: 300                      # 니켈 관련 제약 (Tier3 활동 합계)
+  ni_max_description: 니켈 관련 제약 (선택적)
+  
+  feasibility_threshold: 0.8       # 실현 가능성 임계값
+  feasibility_threshold_description: 실현 가능성 임계값
+
+# 상수값 설정
+constants:
+  base_emission: 80.0              # 기본 배출량 (kg CO2eq/kWh)
+  base_emission_description: 기본 배출량 (kg CO2eq/kWh)
+  
+  # 국가별 전력배출계수 (kg CO2eq/kWh)
+  electricity_coef:
+    한국: 0.637420635
+    중국: 0.8825
+    일본: 0.667861719
+    폴란드: 0.948984701
+    미국: 0.522
+    유럽: 0.432
+  electricity_coef_description: 국가별 전력배출계수 (kg CO2eq/kWh)
+  
+  # 재활용재 환경영향 계수 (신재 대비 비율)
+  recycle_impact:
+    신재: 1.0
+    재활용재:
+      Ni: 0.1
+      Co: 0.15
+      Li: 0.1
+  recycle_impact_description: 재활용재 환경영향 계수 (신재 대비 비율)
+  
+  # 감축활동 효과 계수 (감축비율 1%당 효과)
+  reduction_effect_coefficient: 0.1
+  reduction_effect_coefficient_description: 감축활동 효과 계수 (감축비율 1%당 효과)
+  
+  # 감축활동별 고정 비용 (원)
+  activity_costs:
+    tier1_양극재: 10000
+    tier1_분리막: 8000
+    tier1_전해액: 7000
+    tier2_양극재: 12000
+    tier2_저탄소원료: 15000
+    tier2_전구체: 9000
+    tier3_니켈원료: 20000
+    tier3_코발트: 25000
+  activity_costs_description: 감축활동별 고정 비용 (원)
+  
+  # 감축비율 1%당 가변 비용 (원)
+  variable_cost_per_percent: 50
+  variable_cost_per_percent_description: 감축비율 1%당 가변 비용 (원)
+  
+  # 원료별 단위 비용 (원/단위)
+  material_costs:
+    recycle_material_cost: 500
+    low_carbon_material_cost: 800
+  material_costs_description: 원료별 단위 비용 (원/단위)
+
+# 솔버 설정
+solver_settings:
+  # 문제 유형별 추천 솔버
+  recommended_solver_by_problem:
+    type_A: ipopt               # Type A (비선형): IPOPT
+    type_B_linear: glpk         # Type B (선형): GLPK
+    type_B_integer: cbc         # Type B (정수): CBC
+    maximize_ease: cbc          # 용이성 최대화: CBC
+  
+  # IPOPT 솔버 옵션 (비선형 최적화용)
+  ipopt_options:
+    max_iter: 3000              # 최대 반복 횟수
+    tol: 0.000001               # 수렴 허용 오차
+    print_level: 5              # 출력 레벨
+    description: IPOPT 솔버 옵션 (비선형 최적화용)
+  
+  # GLPK 솔버 옵션 (선형 최적화용)
+  glpk_options:
+    mipgap: 0.01                # MIP gap 허용 오차
+    tmlim: 300                  # 시간 제한 (초)
+    description: GLPK 솔버 옵션 (선형 최적화용)
+  
+  # CBC 솔버 옵션 (정수계획법용)
+  cbc_options:
+    seconds: 300                # 시간 제한 (초)
+    ratio: 0.01                 # Gap 허용치
+    threads: 4                  # 병렬 스레드 수
+    description: CBC 솔버 옵션 (정수계획법용)
+
+# 유효성 검증 규칙
+validation_rules:
+  # 필수 필드
+  required_fields:
+    - objective
+    - decision_vars
+    - constraints
+  
+  # 유효한 목적함수 유형
+  valid_objectives:
+    - minimize_carbon
+    - minimize_cost
+    - maximize_ease
+    - multi_objective
+  
+  # 양극재 타입별 필수 설정
+  cathode_type_requirements:
+    A:
+      - recycle_ratio_fixed
+      - low_carbon_ratio_fixed
+      - emission_range
+    B:
+      - emission_fixed
+      - recycle_range
+      - low_carbon_range
+  
+  # 제약조건 최솟값
+  constraint_minimums:
+    target_carbon: 10.0
+    max_activities: 1
+    max_cost: 1000
+
+# 시나리오 설정
+scenarios:
+  # 보수적 시나리오
+  conservative:
+    description: 보수적 시나리오 - 낮은 감축 목표
+    target_carbon: 60.0         # 목표 탄소발자국 (kg CO2eq/kWh)
+    max_activities: 3           # 최대 활동 수
+    default_reduction_rates: 15 # 기본 감축비율 (%)
+  
+  # 적극적 시나리오
+  aggressive:
+    description: 적극적 시나리오 - 높은 감축 목표
+    target_carbon: 35.0         # 목표 탄소발자국 (kg CO2eq/kWh)
+    max_activities: 8           # 최대 활동 수
+    default_reduction_rates: 40 # 기본 감축비율 (%)
+  
+  # 균형적 시나리오
+  balanced:
+    description: 균형적 시나리오 - 중간 수준 목표
+    target_carbon: 50.0         # 목표 탄소발자국 (kg CO2eq/kWh)
+    max_activities: 5           # 최대 활동 수
+    default_reduction_rates: 25 # 기본 감축비율 (%)
+  
+  # 탄소배출 최소화 시나리오 (추가)
+  carbon_minimization:
+    description: 탄소배출 최소화 시나리오
+    objective: minimize_carbon  # 목적함수 변경
+    target_carbon: 30.0         # 도전적인 목표
+    max_activities: 10          # 활동 제한 완화
+    default_reduction_rates: 50 # 높은 기본 감축비율
+
+# 예시 문제 설정
+sample_problems:
+  # 탄소배출 최소화 문제
+  carbon_minimization:
+    objective: minimize_carbon
+    decision_vars:
+      cathode:
+        type: B
+      location: 한국
+    constraints:
+      target_carbon: 40.0
+  
+  # 비용 최소화 문제
+  cost_minimization:
+    objective: minimize_cost
+    decision_vars:
+      cathode:
+        type: B
+      location: 한국
+    constraints:
+      target_carbon: 50.0
+      max_cost: 80000
+  
+  # 용이성 최대화 문제
+  ease_maximization:
+    objective: maximize_ease
+    decision_vars:
+      cathode:
+        type: B
+      use_binary_variables: true
+      location: 한국
+    constraints:
+      target_carbon: 55.0
+      max_activities: 3
