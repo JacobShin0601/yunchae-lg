@@ -9,16 +9,16 @@ This document provides an overview and description of key projects conducted for
 ## 1. Battery Material Price Forecasting (Lithium and Other Materials)
 
 ### Project Description
-- **Objective**: Forecast the prices of key battery materials, including lithium, to support effective purchasing and strategic decision-making.
-- **Market Sentiment Scoring System**: Developed a system that gathers data from various sources, such as analyst reports, 10-K filings, and YouTube, to extract insights on lithium market trends. Leveraging LLMs (Claude 3 Haiku and Claude 3.5 Sonnet), this system extracts information on both supply and demand aspects, which are then used as features and leading indicators in a 12-month forecasting model. In 2023, our team conducted joint research with LG AI Research, resulting in a PoC. I took a leading role in significantly improving the engineering aspects, including determining input sources, designing the entire pipeline and structure, and implementing LLMOps. I also led the design and implementation of the AWS architecture for this project.
-- **Long-term Lithium Price Forecasting Model**: In collaboration with LG AI Research, we are currently developing a five-year price forecasting model for lithium. The model is structured around an economic framework based on supply and demand, where parameters are fitted using deep learning techniques, achieving an 80% accuracy in backtesting. I specifically contributed by identifying key macroeconomic factors (liquidity and interest rate variables from the U.S. Treasury and Federal Reserve) and ensuring their statistical significance. Additionally, I extracted a graph structure (edge-node structure) from professional institutional reports to map the entire value chain and identify causal relationships between factors. For some key elements, causal inference was conducted using a linear model.
+- **Short-term Price Forecasting (1-year, Spot Purchasing Optimization)**: Built an enhanced short-term model to optimize purchasing timing for the 20–30% spot volume beyond long-term contracts, aiming at cost reduction.
+- **Role**: Served as the sole LLM application developer in a 10-person materials data science team. Designed and implemented a pipeline that collects, cleans, and converts unstructured lithium/materials news, reports, and analyst commentary into features for time-series price models.
+- **Engineering**: Delivered Python crawlers, LLM-based extraction (summarization/tagging), and ETL workflows in a production-deployable form.
+- **Mid-to-Long-term Price Outlook & Mine Investment Feasibility (5-year horizon)**: Core member of a joint task force (LG AI Research, internal data science, and metals business development). Led supply-side modeling and simulator design, structured 10-K (EDGAR) data into inventory/Capex/production proxies, built supply scenarios (base/tight/overshoot), and designed a deep-learning price module reflecting bubble/overheating regimes.
 
 ### Technologies Used
 - **LLMs**: Claude 3 Haiku, Claude 3.5 Sonnet
-- **Statistical Analysis**: Correlation and Granger causality tests, normality and homoscedasticity tests, and non-parametric tests, causal inference with linear model
-- **Data Sources**: Analyst & Research Institute reports, 10-K filings, YouTube (with future plans to add Reddit), FRED dataset
-- **Tools**: Python, LangChain, Pydantic, AWS (LLMOps by Bedrock architecture design and deployment), Pydantic, LangChain
-
+- **Data Sources**: Global news, analyst reports, 10-K filings (EDGAR), FRED dataset
+- **Analysis & Modeling**: Feature engineering from unstructured text, supply-side scenario simulation, deep-learning price outlook
+- **Tools**: Python, LangChain, Pydantic, AWS (LLMOps by Bedrock architecture design and deployment)
 
 ### Reference
 - **Reference1(Sentiment Scoring System)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/MarketSentimentScoringSystem
@@ -26,8 +26,8 @@ This document provides an overview and description of key projects conducted for
 - **Reference3(Graph Extraction Github by Microsoft)**: https://github.com/microsoft/graphrag 
 
 ### Outcomes
-- Successfully developed the Market Sentiment Scoring system, which serves as a key feature and leading indicator in the 12-month lithium price forecasting model.
-- Achieved 80% backtest accuracy in the long-term price forecasting model in collaboration with LG AI Research, supporting future price predictions.
+- The short-term model provided quantitative inputs for spot purchasing decisions, contributing to ~KRW 12B annual cost savings and improved forecast error over baseline time-series models by combining structured price/inventory with market sentiment.
+- The 5-year outlook supported IRR/NPV evaluation for mine equity investments and offtake negotiations; internally assessed to contribute up to ~KRW 300B over five years, with a 10% contribution officially attributed to this workstream.
 
 ---
 
@@ -110,14 +110,15 @@ These projects contributed to strategic decision-making for LG Energy Solution a
 ## 1. 배터리 소재 가격 예측 (리튬 및 기타 소재)
 
 ### 프로젝트 설명
-- **목표**: 리튬을 포함한 주요 배터리 소재의 가격을 예측하여 효과적인 구매와 전략적 의사결정을 지원.
-- **Market Sentiment Scoring 시스템**: 애널리스트 리포트, 기업의 10-K 보고서, YouTube와 같은 다양한 소스에서 데이터를 수집하여 리튬 시황에 대한 정보를 추출하는 시스템을 개발하였습니다. 수요와 공급 요인을 모두 고려해 LLM(Claude 3 Haiku 및 Claude 3.5 Sonnet)을 활용하여 데이터를 추출하였으며, 12개월 예측 모델의 feature이자 선행 지표로 사용했습니다. 2023년도에 저희 팀에서 LG AI Research와 공동연구해 PoC가 나온 상태였으며, 저는 input source 결정부터 전체적인 파이프라인과 구조, LLMOps 등 엔지니어링을 대폭 개선하고 이 프로젝트를 AWS 아키텍처 설계하고 구현하는데 주도했습니다.
-- **리튬 중장기 가격 예측 모델**: LG AI Research와 협업하여 리튬 가격의 5년 장기 예측 모델을 개발 중입니다. 수요 공급 기반의 경제 모델을 구성하여 파라미터를 딥러닝으로 피팅한 후, 가격 예측 모델을 설계하여 현재 백테스트 정확도 80%를 확보했습니다. 특히 저는 거시경제 기반의 주요 변수(미국 재무부 및 연준의 유동성 및 금리 관련 변수)를 발굴하고 통계적 유의성 확보에 기여했습니다. 추가로 전문 기관 레포트로부터 그래프 구조(edge-node structure)를 추출하여 전체 value chain을 파악하고 인자 간 인과관계 파악을 할 수 있도록 하였습니다. (일부 주요 요소에 대해 linear 모델을 통한 causal inference)
+- **단기 가격 예측 고도화 (1년, Spot 구매 최적화)**: 선도계약 외 20~30% Spot 물량의 구매 타이밍 최적화를 통해 원가 절감을 목표로 한 단기 예측 모델 고도화.
+- **역할**: 원자재 데이터 사이언티스트 10인 팀 내 LLM 응용 개발 담당 1인으로 참여. 글로벌 리튬·원자재 뉴스/리포트/애널리스트 코멘트 등 비정형 텍스트를 수집·정제하고 시계열 가격모델의 Feature로 자동 반영하는 파이프라인 설계 및 구현.
+- **엔지니어링**: Python 기반 크롤러, LLM 기반 정보 추출(요약/태깅), ETL 워크플로우를 운영환경 배포 가능 형태로 구축.
+- **리튬 중장기 가격 전망 및 광산투자 타당성 분석 (5년 Horizon)**: LG AI연구원·내부 데이터 사이언티스트·메탈사업개발팀 합동 태스크포스 코어 멤버로 참여. 공급 사이드 모델링 및 시뮬레이터 총괄, 10-K(EDGAR) 공시를 크롤링해 재고/Capex/생산계획 Proxy 구조화, 공급 시나리오(base/tight/overshoot) 설계, 과열·버블 구간을 반영하는 딥러닝 기반 가격 전망 모듈 설계.
 
 ### 사용 기술
 - **LLM들**: Claude 3 Haiku, Claude 3.5 Sonnet
-- **통계 분석**: 상관관계 및 그레인저 인과성 검정, 정규성 및 등분산성 검정 및 비모수 검정, 인과추론
-- **데이터 소스**: Analyst & Research Institute 리포트, 10-K 보고서, YouTube (향후 Reddit 추가 예정), FRED dataset
+- **데이터 소스**: 글로벌 뉴스, 애널리스트 리포트, 10-K(EDGAR), FRED dataset
+- **분석/모델링**: 비정형 Feature 엔지니어링, 공급 시나리오 시뮬레이션, 딥러닝 가격 전망
 - **도구**: Python, LangChain, Pydantic, AWS (Bedrock 아키텍처 설계 및 배포를 통한 LLMOps)
 
 ### Reference
@@ -126,8 +127,9 @@ These projects contributed to strategic decision-making for LG Energy Solution a
 - **Reference3(Graph Extraction Github by Microsoft)**: https://github.com/microsoft/graphrag 
 
 ### 성과
-- Market Sentiment Scoring 시스템을 성공적으로 개발하여, 12개월 리튬 가격 예측 모델의 주요 feature이자 선행 지표로 활용.
-- LG AI Research와의 협업을 통해 중장기 예측 모델에서 백테스트 정확도 80%를 달성하여 향후자가격 예측을 지원.
+- Spot 구매 의사결정의 정량 인풋으로 활용되며, 연간 약 120억 원 수준의 원가 절감에 기여.
+- 정형(Price/Inventory)과 비정형(Market Sentiment) 결합으로 단순 시계열 대비 예측 오차율을 개선하고 의사결정 신뢰도 제고.
+- 5년 전망 결과를 기반으로 광산 지분투자 및 오프테이크 협상 시 IRR/NPV 검토 자료로 활용되었고, 향후 5년 약 3,000억 원 수준의 이익 기여 가능 프로젝트로 평가(기여도 10% 공식 인정).
 
 ---
 
