@@ -54,11 +54,11 @@ This document provides an overview and description of key projects conducted for
 
 ---
 
-## 3. Multi-Agent Research Workflow (Lithium Project Intelligence)
+## 3. Multi-Agent Research Workflow (Market Intelligence)
 
 ### Project Description
 - **Objective**: Build a multi-agent research pipeline that gathers, analyzes, and summarizes global lithium project signals (production cuts, closures, new developments) into structured reports.
-- **Workflow**: Coordinator → Researcher (search/crawl) → Coder (data analysis) → Reporter (final report). The pipeline produces Markdown/HTML reports and visual artifacts for internal review.
+- **Workflow**: Coordinator → Planner → Supervisor → Researcher (search/crawl) → Coder (data analysis) → Reporter (final report). The pipeline produces Markdown/HTML reports and visual artifacts for internal review.
 - **Outputs**: Example deliverables include `final_report.md`, progressive reports, and charts generated in `artifacts/`.
 
 ### Technologies Used
@@ -153,11 +153,11 @@ These projects contributed to strategic decision-making for LG Energy Solution a
 
 ---
 
-## 3. 멀티 에이전트 리서치 워크플로우 (리튬 프로젝트 인텔리전스)
+## 3. 멀티 에이전트 리서치 워크플로우 (마켓 인텔리전스)
 
 ### 프로젝트 설명
 - **목표**: 글로벌 리튬 프로젝트의 감산, 폐쇄, 신규 개발 정보를 수집·분석·요약하는 멀티 에이전트 리서치 파이프라인 구축.
-- **워크플로우**: Coordinator → Researcher(검색/크롤링) → Coder(데이터 분석) → Reporter(최종 보고서). Markdown/HTML 보고서와 시각화 산출물을 생성.
+- **워크플로우**: Coordinator → Planner → Supervisor → Researcher(검색/크롤링) → Coder(데이터 분석) → Reporter(최종 보고서). Markdown/HTML 보고서와 시각화 산출물을 생성.
 - **산출물**: `final_report.md`, progressive report, `artifacts/` 내 차트 및 리포트.
 
 ### 사용 기술
