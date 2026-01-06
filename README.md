@@ -54,6 +54,45 @@ This document provides an overview and description of key projects conducted for
 
 ---
 
+## 3. Multi-Agent Research Workflow (Lithium Project Intelligence)
+
+### Project Description
+- **Objective**: Build a multi-agent research pipeline that gathers, analyzes, and summarizes global lithium project signals (production cuts, closures, new developments) into structured reports.
+- **Workflow**: Coordinator → Researcher (search/crawl) → Coder (data analysis) → Reporter (final report). The pipeline produces Markdown/HTML reports and visual artifacts for internal review.
+- **Outputs**: Example deliverables include `final_report.md`, progressive reports, and charts generated in `artifacts/`.
+
+### Technologies Used
+- **Agents & Orchestration**: Async workflow, role-based prompts (researcher/coder/reporter)
+- **Data & Analysis**: Python, pandas-based analysis, visualization artifacts
+- **Tools**: Search/crawl utilities (Tavily), report generation to Markdown/HTML
+
+### Reference
+- **Reference1(Multi-Agent Research)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/MultiAgentResearch
+
+### Outcomes
+- Produced structured lithium project intelligence reports and reusable research templates.
+
+---
+
+## 4. PCF Optimization System (Battery Manufacturing)
+
+### Project Description
+- **Objective**: Optimize battery manufacturing inputs to reduce Product Carbon Footprint (PCF) while balancing cost.
+- **Optimization Scope**: Cathode/anode composition, recycled and low-carbon materials, RE100 adoption, and Pareto trade-off exploration.
+- **Interface**: Streamlit-based UI for simulation, constraint setup, solver selection, and results comparison.
+
+### Technologies Used
+- **Optimization**: GLPK/IPOPT solvers, Pareto methods (Weighted Sum, Epsilon-Constraint, NSGA-II)
+- **App & Analysis**: Python, Streamlit, modular optimization engine
+
+### Reference
+- **Reference1(PCF Optimization)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/PCF_sim_opt
+
+### Outcomes
+- Enabled scenario-based evaluation of carbon vs. cost trade-offs with configurable constraints.
+
+---
+
 These projects contributed to strategic decision-making for LG Energy Solution and provided additional data insights and operational efficiencies. The Sample Code on GitHub is based on similar concepts and methodologies used in the actual projects.
 
    
@@ -111,6 +150,45 @@ These projects contributed to strategic decision-making for LG Energy Solution a
 ### 성과
 - YouTube 요약 시스템을 성공적으로 업그레이드하여 내부 이해관계자들에게 주간 뉴스레터 형태로 배포.
 - 멀티모달 RAG 시스템을 개발하여 복잡한 문서의 검색과 조회를 지원하고, 다양한 부서에서 활용되었으며 6개의 파생 제품이 추가로 제작됨.
+
+---
+
+## 3. 멀티 에이전트 리서치 워크플로우 (리튬 프로젝트 인텔리전스)
+
+### 프로젝트 설명
+- **목표**: 글로벌 리튬 프로젝트의 감산, 폐쇄, 신규 개발 정보를 수집·분석·요약하는 멀티 에이전트 리서치 파이프라인 구축.
+- **워크플로우**: Coordinator → Researcher(검색/크롤링) → Coder(데이터 분석) → Reporter(최종 보고서). Markdown/HTML 보고서와 시각화 산출물을 생성.
+- **산출물**: `final_report.md`, progressive report, `artifacts/` 내 차트 및 리포트.
+
+### 사용 기술
+- **에이전트/오케스트레이션**: Async 워크플로우, 역할 기반 프롬프트
+- **데이터 분석**: Python, 시각화 산출물
+- **도구**: Tavily 기반 검색/크롤링, Markdown/HTML 리포트 생성
+
+### Reference
+- **Reference1(Multi-Agent Research)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/MultiAgentResearch
+
+### 성과
+- 리튬 프로젝트 인텔리전스 리포트와 재사용 가능한 리서치 템플릿을 제작.
+
+---
+
+## 4. PCF 최적화 시스템 (배터리 제조)
+
+### 프로젝트 설명
+- **목표**: 제품 탄소발자국(PCF)을 최소화하면서 비용과의 트레이드오프를 고려한 자재 구성 최적화.
+- **최적화 범위**: 양극/음극 조성, 재활용 및 저탄소 소재, RE100 적용, 파레토 최적화 탐색.
+- **인터페이스**: Streamlit 기반 UI로 시뮬레이션, 제약조건 설정, 솔버 선택, 결과 비교 제공.
+
+### 사용 기술
+- **최적화**: GLPK/IPOPT 솔버, 파레토 방법(Weighted Sum, Epsilon-Constraint, NSGA-II)
+- **앱/분석**: Python, Streamlit, 모듈형 최적화 엔진
+
+### Reference
+- **Reference1(PCF Optimization)**: https://github.com/JacobShin0601/yunchae-lg/tree/main/PCF_sim_opt
+
+### 성과
+- 탄소-비용 트레이드오프를 시나리오로 비교·평가할 수 있는 최적화 파이프라인 구축.
 
 ---
 
